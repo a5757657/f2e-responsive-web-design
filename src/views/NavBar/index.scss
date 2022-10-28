@@ -1,0 +1,15 @@
+@import "../../styles/mixin.scss";
+
+.NavBar {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  border: 1px solid $Grayscale-700;
+  background: rgba(217, 217, 217, 0.02);
+  backdrop-filter: blur(2px);
+}

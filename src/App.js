@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './styles/global.scss'
+import AskQuestion from './views/AskOuestion'
+import Awards from './views/Awards'
+import Banner from "./views/Banner";
+import BreakTheQuestion from "./views/BreakTheQuestion";
+import Faq from './views/Faq'
+import Footer from './views/Footer'
+import NavBar from "./views/NavBar";
+import RelayAndShare from './views/RelayAndShare';
+import SolutionAndEvent from './views/SolutionAndEvent'
+import Sponsor from './views/Sponsor'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar />
+      <Banner />
+      <AskQuestion />
+      <BreakTheQuestion />
+      <SolutionAndEvent />
+      <Awards />
+      <Sponsor />
+      <RelayAndShare />
+      <Faq />
+      <Footer />
     </div>
   );
 }
