@@ -1,13 +1,8 @@
-@import './reset.css';
-
-// 引入本機字體
-@font-face {
-  font-family: defaultFont !important;
-  src: url("./../asset/Font/PingFang.ttc"), url("./../asset/Font/Helvetica.ttc");
-}
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400;500;600;700;900&display=swap');
 
 * {
-  font-family: defaultFont;
+  font-family: 'Noto Serif TC', serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
