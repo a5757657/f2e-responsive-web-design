@@ -1,11 +1,11 @@
  // RWD斷點
 @mixin extraLarge {
-  @media (max-width: 1400) {
+  @media (max-width: 1400px) {
     @content;
   }
 }
 @mixin large {
-  @media (max-width: 1280) {
+  @media (max-width: 1280px) {
     @content;
   }
 }
@@ -15,12 +15,12 @@
   }
 }
 @mixin small {
-  @media (max-width: 576) {
+  @media (max-width: 576px) {
     @content;
   }
 }
 @mixin extraSmall {
-  @media (max-width: 494) {
+  @media (max-width: 494px) {
     @content;
   }
 }
