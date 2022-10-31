@@ -2,13 +2,16 @@
 
 // 引入本機字體
 @font-face {
-  font-family: defaultFont !important;
+  font-family: defaultFont;
   src: url("./../asset/Font/PingFang.ttc"), url("./../asset/Font/Helvetica.ttc");
 }
 
 * {
-  font-family: defaultFont;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.App {
+  font-family: defaultFont !important;
 }
