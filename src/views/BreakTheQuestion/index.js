@@ -2,8 +2,19 @@ import React, { useLayoutEffect } from 'react'
 import './index.scss'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import fe1 from './../../asset/BreakTheQuestion/images/FE-1.svg'
+import fe2 from './../../asset/BreakTheQuestion/images/FE-2.svg'
+import fe3 from './../../asset/BreakTheQuestion/images/FE-3.svg'
+import fe4 from './../../asset/BreakTheQuestion/images/FE-4.svg'
+import fe5 from './../../asset/BreakTheQuestion/images/FE-5.svg'
+import ui1 from './../../asset/BreakTheQuestion/images/UI-1.svg'
+import ui2 from './../../asset/BreakTheQuestion/images/UI-2.svg'
+import ui3 from './../../asset/BreakTheQuestion/images/UI-3.svg'
+import ui4 from './../../asset/BreakTheQuestion/images/UI-4.svg'
+import ui5 from './../../asset/BreakTheQuestion/images/UI-5.svg'
 
 const BreakTheQuestion = () => {
+
   /* useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger)
@@ -53,7 +64,27 @@ const BreakTheQuestion = () => {
     return () => ctx.revert();
   }, []) */
   return (
-    <div className='BreakTheQuestion'><p>破題</p></div>
+    <div className='BreakTheQuestion'>
+      <div className="title">本屆主題：互動式網頁設計</div>
+      <div className="container">
+        <div className="UI">
+          <div>UI 設計師</div>
+          <img src={ui1} alt="" />
+          <img src={ui5} alt="" />
+          <img src={ui4} alt="" />
+          <img src={ui3} alt="" />
+          <img src={ui2} alt="" />
+        </div>
+        <div className="FE">
+          <div>前端工程師</div>
+          <img src={fe1} alt="" />
+          <img src={fe3} alt="" />
+          <img src={fe4} alt="" />
+          <img src={fe2} alt="" />
+          <img src={fe5} alt="" />
+        </div>
+      </div>
+    </div>
   )
 }
 

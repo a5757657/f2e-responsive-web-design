@@ -1,15 +1,83 @@
 @import "../../styles/mixin.scss";
 
-.NavBar {
+nav {
   width: 100%;
-  height: 60px;
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   top: 0;
   left: 0;
-  border: 1px solid $Grayscale-700;
   background: rgba(217, 217, 217, 0.02);
   backdrop-filter: blur(2px);
+  z-index: 99;
+  .NavBar {
+    max-width: 1600px;
+    flex-grow: 1;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: $Grayscale-0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .left {
+      display: flex;
+      align-items: center;
+      .title {
+        padding: 12px 13px 12px 16px;
+        position: relative;
+        height: 60px;
+        cursor: pointer;
+        &::after {
+          content: '';
+          width: 1px;
+          height: 60px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: $Grayscale-0;
+        }
+        @include Button-Semi ($color: $Yellow-100)
+      }
+      ul {
+        display: flex;
+        padding-left: 40px;
+        column-gap: 60px;
+        li {
+          cursor: pointer;
+          @include Caption ($color: $Grayscale-0)
+        }
+        @include large {
+          padding-left: 20px;
+          column-gap: 30px;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      column-gap: 43px;
+      .countDown {
+        padding: 8px 10px 8px 10px;
+        background-color: $Grayscale-0;
+        @include Caption ($color: $Red-300)
+      }
+      button {
+        height: 100%;
+        font-family : inherit;
+        padding: 16px 32px 16px 33px;
+        border: none;
+        background-color: $Grayscale-0;
+        cursor: pointer;
+        @include Body-Semi ($color: $Blue-300)
+      }
+    }
+  }
 }
