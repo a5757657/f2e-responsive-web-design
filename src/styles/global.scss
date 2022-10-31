@@ -7,3 +7,116 @@
   box-sizing: border-box;
   font-family: 'Noto Sans TC', sans-serif !important;
 }
+
+// 顏色
+$Grayscale-900: #0d0d0d;
+$Grayscale-800: #333333;
+$Grayscale-700: #555555;
+$Grayscale-600: #888888;
+$Grayscale-500: #999999;
+$Grayscale-400: #aaaaaa;
+$Grayscale-300: #cccccc;
+$Grayscale-200: #dddddd;
+$Grayscale-100: #f0f0f0;
+$Grayscale-50: #f8f8f8;
+$Grayscale-0: #ffffff;
+
+$Red-500: #671010;
+$Red-400: #b01c1c;
+$Red-300: #e14040;
+$Red-200: #ec8a8a;
+$Red-100: #f8d3d3;
+
+$Yellow-500: #5a4308;
+$Yellow-400: #a87d0f;
+$Yellow-300: #ebb221;
+$Yellow-200: #f2cd6f;
+$Yellow-100: #f9e8bd;
+
+$Blue-500: #103550;
+$Blue-400: #1f6496;
+$Blue-300: #3492d6;
+$Blue-200: #7bb8e4;
+$Blue-100: #c2def2;
+
+$Lightblue-500: #1a383e;
+$Lightblue-400: #336e7a;
+$Lightblue-300: #4da3b5;
+$Lightblue-200: #89c2ce;
+$Lightblue-100: #c5e1e7;
+
+// 按鈕變數
+$btn-Hug: 44px;
+$btn-border-radius: 0%;
+$btn-font-size: 16px;
+$btn-font-height: 28px;
+$btn-font-weight: 900;
+
+// 按鈕基本設定 btn-basic-style
+.btn {
+  min-height: $btn-Hug;
+  border: none;
+  border-radius: $btn-border-radius;
+  box-shadow: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  line-height: $btn-font-height;
+}
+
+// 網頁上大按鈕 (我要報名) & nav-btn
+.btn-cta {
+  color: $Blue-300;
+  background: {
+    image: linear-gradient(90deg, $Blue-500 50%, $Grayscale-0 50%);
+    position: 100%;
+    size: 400%;
+  }
+  transition: background 0.5s ease-in;
+
+  &:hover {
+    background-position: 0;
+    color: $Grayscale-0;
+    transition: 1s ease-out;
+    &:after {
+      transition: 1s ease-out;
+      transition-delay: 0.5s;
+    }
+  }
+
+  &:active {
+    color: $Yellow-300;
+    background-position: 100%;
+    transition: none;
+  }
+
+  &:disabled {
+    color: $Blue-300;
+    opacity: 0.5;
+    background-position: 100%;
+    transition: none;
+    cursor: not-allowed;
+  }
+}
+
+// 區塊九 tag-btn
+.btn-tag {
+  min-width: 104px;
+  outline: 1px solid transparent;
+  color: $Lightblue-300;
+  background: $Grayscale-100;
+
+  &:hover {
+    color: $Lightblue-400;
+    transition: 0.5s ease-out;
+  }
+
+  &:active {
+    outline: 1px solid $Grayscale-100;
+    background-color: rgba(240, 240, 240, .25);
+    color: $Grayscale-100;
+  }
+}
