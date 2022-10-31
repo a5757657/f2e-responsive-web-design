@@ -2,7 +2,7 @@
 
 .BreakTheQuestion {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   border: 1px solid $Red-300;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,7 @@
   background-color: $Blue-300;
   .title {
     margin-top: 160px;
+    text-align: center;
     @include Button-Semi($color: $Grayscale-0);
     @include large {
       margin-top: 80px;
@@ -33,7 +34,7 @@
         z-index: 0;
       }
       div {
-        -webkit-text-stroke: 1px $Grayscale-900;
+        -webkit-text-stroke: 2px $Grayscale-900;
         margin-bottom: 54px;
         z-index: 1;
         @include Head($color: $Grayscale-0);
