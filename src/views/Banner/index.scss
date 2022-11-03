@@ -1,11 +1,140 @@
-@import '../../styles/mixin.scss';
+@import "../../styles/mixin.scss";
 
 .Banner {
   width: 100%;
-  height: 100vh;
+  min-width: 375px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid $Red-300;
-  @include Subheading
+
+  height: 100vh;
+  background-color: $Blue-200;
+  position: relative;
+  overflow: hidden;
+
+  .BackgroundContainer {
+    width: 100%;
+    max-width: 1440px;
+    min-width: 375px;
+    height: 100vh;
+    position: absolute;
+
+    .BackgroundImageElement {
+      position: absolute;
+    }
+
+    .purple {
+      left: calc(50% - 771px / 2 - 474.5px);
+      top: -113px;
+      @include medium {
+        width: 564px;
+        top: -143px;
+        left: -309px;
+      }
+    }
+
+    .pink {
+      left: calc(min(max(11.7vw, 42px), 169px));
+      top: 364px;
+      @include medium {
+        top: 250px;
+        width: 291px;
+      }
+    }
+    .blue {
+      width: calc(min(max(61.11vw, 522px), 880px));
+      left: calc(min(max(19.44vw, -73px), 280px));
+      top: 94px;
+      @include medium {
+        width: 522px;
+        top: 80px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+    .green {
+      width: calc(min(max(79.16vw, 422px), 1140px));
+      top: -297px;
+      left: calc(min(max(42.57vw, 164px), 613px));
+      @include medium {
+        top: -74px;
+        width: 422px;
+      }
+    }
+  }
+  .MainContainer {
+    width: 100%;
+    min-width: 375px;
+
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    padding-top: 60px;
+    padding-bottom: 50px;
+
+    border: 1px solid $Red-300;
+    background-color: $Blue-200;
+    @include large {
+      padding-top: 80px;
+    }
+    @include medium {
+      padding-top: 140px;
+    }
+    @include small {
+      align-items: center;
+      justify-content: center;
+      gap: 70px;
+      padding-top: 208px;
+    }
+
+    .TitleContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      @include small {
+      }
+      .Title {
+        font-weight: 600;
+        font-size: calc(min(max(15.27vw, 50px), 220px));
+        color: $Grayscale-0;
+        -webkit-text-stroke: 1px $Grayscale-900;
+        line-height: normal;
+        @include extraSmall {
+          font-size: 50px;
+          line-height: 70px;
+          white-space: nowrap;
+        }
+      }
+      .Subtitle {
+        font-weight: 600;
+        font-size: 110px;
+        font-size: calc(min(max(8.5vw, 40px), 110px));
+        color: $Grayscale-0;
+        -webkit-text-stroke: 1px $Grayscale-900;
+        @include extraSmall {
+          font-size: 40px;
+          line-height: 56px;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .ActionContainer {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      .ActionText {
+        font-size: 24px;
+        color: $Grayscale-0;
+      }
+    }
+  }
 }
