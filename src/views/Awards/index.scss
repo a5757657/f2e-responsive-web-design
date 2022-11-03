@@ -2,113 +2,141 @@
 
 .Awards {
   width: 100%;
-  padding-bottom: 200px;
+  height: 100vh;
   background-color: $Red-300;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  padding: 160px 0;
   @include large {
-    padding-right: 38px;
-    padding-left: 38px;
+    height: fit-content;
+    padding: 100px 38px;
   }
-  p {
-    margin-top: 161px;
-    text-align: center;
-    @include Button-Semi($color: $Grayscale-800);
-  }
-  h2 {
-    margin-top: 80px;
-    -webkit-text-stroke: 1.5px $Grayscale-900;
-    @include Subheading($color: $Grayscale-0);
-  }
-  .selectionWrap {
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-    column-gap: 40px;
-    @include large {
-      flex-direction: column;
-      width: 100%;
-      row-gap: 20px;
+  .container {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    .fade-in-right {
+      opacity: 0;
     }
-    .awards {
-      width: 480px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      row-gap: 16px;
-      border: 1px solid $Grayscale-0;
-      backdrop-filter: blur(2px);
-      padding: 32px 74px;
-      @include large {
-        width: 100%;
-        padding: 32px;
-      }
-      h3 {
-        height: 36px;
-        background-color: $Grayscale-0;
-        padding: 0 16px;
-        @include Button-Semi($color: $Red-300);
-      }
-      p {
-        text-align: center;
-        margin-top: 0;
-        @include Body($color: $Grayscale-800);
-      }
+    // 區區修煉已經無法滿足了嗎？還有比賽等著你！
+    p {
+      //margin-top: 161px;
+      text-align: center;
+      @include Button-Semi($color: $Grayscale-800);
     }
-  }
-  .titleWrap {
-    display: flex;
-    align-items: center;
-    padding-top: 60px;
-    column-gap: 16px;
+    // 評審機制
     h2 {
-      margin: 0;
+      margin-top: 80px;
+      text-align: center;
+      -webkit-text-stroke: 1.5px $Grayscale-900;
+      @include Subheading($color: $Grayscale-0);
     }
-    span {
-      @include Body($color: $Grayscale-800);
-    }
-  }
-  .awardsWrap {
-    padding-top: 56px;
-    display: flex;
-    justify-content: center;
-    column-gap: 40px;
-    @include large {
-      flex-direction: column;
-      width: 100%;
-      row-gap: 20px;
-    }
-    .awards {
+    .selectionWrap {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      row-gap: 16px;
-      width: 306.67px;
-      padding-top: 32px;
-      padding-bottom: 32px;
-      border: 1px solid $Grayscale-0;
-      backdrop-filter: blur(2px);
+      justify-content: center;
+      margin-top: 40px;
+      column-gap: 40px;
       @include large {
+        flex-direction: column;
         width: 100%;
-        padding: 32px;
+        row-gap: 20px;
       }
-      h3 {
-        height: 36px;
-        background-color: $Grayscale-0;
-        padding: 0 16px;
-        @include Button-Semi($color: $Yellow-300);
+      .awards {
+        width: 480px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+        border: 1px solid $Grayscale-0;
+        backdrop-filter: blur(2px);
+        padding: 32px 74px;
+        @include large {
+          width: 100%;
+          padding: 32px;
+        }
+        h3 {
+          height: 36px;
+          background-color: $Grayscale-0;
+          padding: 0 16px;
+          @include Button-Semi($color: $Red-300);
+        }
+        p {
+          text-align: center;
+          margin-top: 0;
+          @include Body($color: $Grayscale-800);
+        }
       }
-      p {
-        margin-top: 0;
+    }
+    .titleWrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 60px;
+      column-gap: 16px;
+      // 獎項
+      h2 {
+        margin: 0;
+      }
+      // 皆含數位獎狀
+      span {
         @include Body($color: $Grayscale-800);
       }
-      &:nth-child(2) h3{
-        color: $Blue-300;
+    }
+    .awardsWrap {
+      padding-top: 56px;
+      display: flex;
+      justify-content: center;
+      column-gap: 40px;
+      @include large {
+        flex-direction: column;
+        width: 100%;
+        row-gap: 20px;
       }
-      &:nth-child(3) h3{
-        color: $Red-300;
+      .awards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+        width: 306.67px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        border: 1px solid $Grayscale-0;
+        backdrop-filter: blur(2px);
+        @include large {
+          width: 100%;
+          padding: 32px;
+        }
+        h3 {
+          height: 36px;
+          background-color: $Grayscale-0;
+          padding: 0 16px;
+          @include Button-Semi($color: $Yellow-300);
+        }
+        p {
+          margin-top: 0;
+          @include Body($color: $Grayscale-800);
+        }
+        &:nth-child(2) h3{
+          color: $Blue-300;
+        }
+        &:nth-child(3) h3{
+          color: $Red-300;
+        }
       }
+    }
+  }
+  .bg {
+    clip-path: circle(80% at 50% 50%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(164, 164, 164);
+    @include large {
+      clip-path: circle(100%);
     }
   }
 }
