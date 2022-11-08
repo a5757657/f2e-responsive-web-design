@@ -15,7 +15,7 @@ const Awards = () => {
           scrub: true,
         },
       });
-      srollTL.to(".bg", { clipPath: "circle(0% at 50% 50%)" });
+      srollTL.to(".bg", { scale: 0 });
       gsap.utils.toArray(".fade-in-right").forEach((ele, index) => {
 
         ScrollTrigger.create({

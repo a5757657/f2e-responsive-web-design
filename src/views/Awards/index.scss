@@ -3,19 +3,17 @@
 .Awards {
   width: 100%;
   height: 100vh;
-  background-color: $Red-300;
+  background-color: $Blue-400;
   display: flex;
-  flex-direction: column;
   align-items: center;
   position: relative;
-  padding: 160px 0;
+  overflow: hidden;
   @include large {
-    height: fit-content;
     padding: 100px 38px;
+    height: fit-content;
   }
   .container {
     width: 100%;
-    height: 100%;
     z-index: 1;
     .fade-in-right {
       opacity: 0;
@@ -49,23 +47,19 @@
         flex-direction: column;
         align-items: center;
         row-gap: 16px;
-        border: 1px solid $Grayscale-0;
-        backdrop-filter: blur(2px);
+        background-color: $Grayscale-800;
         padding: 32px 74px;
         @include large {
           width: 100%;
           padding: 32px;
         }
         h3 {
-          height: 36px;
-          background-color: $Grayscale-0;
-          padding: 0 16px;
-          @include Button-Semi($color: $Red-300);
+          @include Button-Semi($color: $Grayscale-0);
         }
         p {
           text-align: center;
           margin-top: 0;
-          @include Body($color: $Grayscale-800);
+          @include Body($color: $Grayscale-0);
         }
       }
     }
@@ -81,7 +75,7 @@
       }
       // 皆含數位獎狀
       span {
-        @include Body($color: $Grayscale-800);
+        @include Body($color: $Grayscale-700);
       }
     }
     .awardsWrap {
@@ -102,41 +96,39 @@
         width: 306.67px;
         padding-top: 32px;
         padding-bottom: 32px;
-        border: 1px solid $Grayscale-0;
-        backdrop-filter: blur(2px);
+        background-color: $Yellow-300;
         @include large {
           width: 100%;
           padding: 32px;
         }
         h3 {
           height: 36px;
-          background-color: $Grayscale-0;
           padding: 0 16px;
-          @include Button-Semi($color: $Yellow-300);
+          @include Button-Semi($color: $Grayscale-0);
         }
         p {
           margin-top: 0;
-          @include Body($color: $Grayscale-800);
+          @include Body($color: $Grayscale-0);
         }
-        &:nth-child(2) h3{
-          color: $Blue-300;
+        &:nth-child(2) {
+          background-color: $Blue-300;
         }
-        &:nth-child(3) h3{
-          color: $Red-300;
+        &:nth-child(3) {
+          background-color: $Red-400;
         }
       }
     }
   }
   .bg {
-    clip-path: circle(80% at 50% 50%);
-    width: 100%;
-    height: 100%;
+    scale: 350%;
+    background: url('./../../asset/Awards/images/白色底圖.png') no-repeat center;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgb(164, 164, 164);
     @include large {
-      clip-path: circle(100%);
+      background-size: contain;
     }
   }
 }

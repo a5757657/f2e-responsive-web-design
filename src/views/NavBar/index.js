@@ -19,7 +19,7 @@ const NavBar = () => {
           <div className="countDown">
             報名倒數  20 天 1 小時 32 分 20 秒
           </div>
-          <button>我要報名</button>
+          <button className='btn btn-cta'>我要報名</button>
         </div>
       </div>
     </nav>

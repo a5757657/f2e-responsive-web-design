@@ -15,7 +15,7 @@ nav {
     display: none;
   }
   .NavBar {
-    max-width: 1600px;
+    width: 100%;
     flex-grow: 1;
     height: 60px;
     display: flex;
@@ -63,7 +63,7 @@ nav {
         column-gap: 60px;
         li {
           cursor: pointer;
-          @include Caption ($color: $Grayscale-0)
+          @include Body ($color: $Grayscale-0)
         }
         @include large {
           padding-left: 20px;
@@ -79,6 +79,7 @@ nav {
       align-items: center;
       column-gap: 43px;
       height: 100%;
+      position: relative;
       .countDown {
         background-color: $Grayscale-0;
         padding-left: 10px;
@@ -92,10 +93,7 @@ nav {
         height: 100%;
         padding-right: 32px;
         padding-left: 33px;
-        border: none;
-        background-color: $Grayscale-0;
         cursor: pointer;
-        @include Body-Semi ($color: $Blue-300)
       }
     }
   }
