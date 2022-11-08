@@ -42,6 +42,7 @@
         align-items: center;
         height: 288px;
         width: 400px;
+        margin-bottom: 10px;
         background-color: $Grayscale-0;
         @include large {
           width: calc(max(31vw, 288px));
@@ -54,16 +55,17 @@
           transform: translateY(-4px);
           .word{
             display: block;
-            background-color: $Grayscale-900;
-            opacity: 0.6;
+            background-color: rgba($color: $Grayscale-900, $alpha: 0.6);
           }
         }
 
         .word{
+          width: 100%;
+          height: 100%;
           display: none;
           position: absolute;
-          -webkit-text-stroke: 1px $Grayscale-900;
-          margin-bottom: 10px;
+          text-align: center;
+          -webkit-text-stroke: 2px $Grayscale-900;
           @include Subheading($color: $Grayscale-0);
         }
       }

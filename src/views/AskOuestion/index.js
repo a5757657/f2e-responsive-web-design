@@ -1,6 +1,20 @@
 import React from "react";
+import { Form } from "react-router-dom";
 import "./index.scss";
-// import '../../styles/global.scss';
+
+// Images
+import q11 from "../../asset/AskQuesSponsor/AskQuestion/1-1png";
+import q12 from "../../asset/AskQuesSponsor/AskQuestion/1-2png";
+import q13 from "../../asset/AskQuesSponsor/AskQuestion/1-3png";
+import q14 from "../../asset/AskQuesSponsor/AskQuestion/1-4png";
+import q21 from "../../asset/AskQuesSponsor/AskQuestion/2-1png";
+import q22 from "../../asset/AskQuesSponsor/AskQuestion/2-2png";
+import q23 from "../../asset/AskQuesSponsor/AskQuestion/2-3png";
+import q24 from "../../asset/AskQuesSponsor/AskQuestion/2-4png";
+import q31 from "../../asset/AskQuesSponsor/AskQuestion/3-1png";
+import q32 from "../../asset/AskQuesSponsor/AskQuestion/3-2png";
+import q33 from "../../asset/AskQuesSponsor/AskQuestion/3-3png";
+import q34 from "../../asset/AskQuesSponsor/AskQuestion/3-4png";
 
 const index = () => {
   return (
@@ -8,11 +22,11 @@ const index = () => {
       <div className="title">你是否也有以下困擾？</div>
       <div className="container">
         <div className="grid">
-          <img id="" src="" alt="" />
-          <div className="Q1">
-            <p>羨慕別人的酷酷網頁動畫？</p>
+          <div className="blocks">
+            <img id="" src="" alt="" />
+            <div className="Q1">羨慕別人的酷酷網頁動畫？</div>
           </div>
-          <div className="box">
+          <div className="blocks">
             <div className="Q2">
               <p>滿足不了同事的許願？</p>
             </div>
