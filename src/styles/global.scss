@@ -105,9 +105,9 @@ $btn-font-weight: 900;
 // 區塊九 tag-btn
 .btn-tag {
   min-width: 104px;
-  outline: 1px solid transparent;
-  color: $Lightblue-300;
-  background: $Grayscale-100;
+  outline: 1px solid $Grayscale-100;
+  background-color: rgba(240, 240, 240, .25);
+  color: $Grayscale-100;
 
   &:hover {
     color: $Lightblue-400;
@@ -115,8 +115,8 @@ $btn-font-weight: 900;
   }
 
   &:active {
-    outline: 1px solid $Grayscale-100;
-    background-color: rgba(240, 240, 240, .25);
-    color: $Grayscale-100;
+    outline: 1px solid transparent;
+    color: $Lightblue-300;
+    background: $Grayscale-100;
   }
 }

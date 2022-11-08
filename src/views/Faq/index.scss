@@ -7,5 +7,77 @@
   justify-content: center;
   align-items: center;
   border: 1px solid $Red-300;
-  @include Subheading
+  background: linear-gradient($Blue-400,$Blue-500);
+
+  .title {
+    z-index: 5;
+    margin-top: 160px;
+    margin-bottom: 80px;
+    text-align: center;
+    @include Button-Semi($color: $Grayscale-0);
+    @include large() {
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+  }
+  
+  .container{
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    position: relative;
+
+    .bg{
+      z-index: 1;
+      position: absolute;
+    }
+
+    .wrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .btns{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 40px;
+
+        @include medium{
+          grid-template-columns: none;
+          grid-template-rows: 1fr 1fr 1fr 1fr;
+          gap: 20px;
+          button{
+            width: 300px;
+          }
+        }
+      }
+
+      .content{
+        .question{
+          @include Button-Semi($color: $Yellow-200);
+          margin-bottom: 16px;
+          text-align: center;
+        }
+        .answer{
+          @include Body($color: $Grayscale-0);
+          margin-bottom: 40px;
+          text-align: center;
+        }
+      }
+
+      .joinBtn{
+        width: 300px;
+        margin-top: 40px;
+        @include medium{
+          margin-top: 0px;
+        }
+      }
+    }
+
+    @include large{
+      padding: 0 38px;
+    }
+  }
 }

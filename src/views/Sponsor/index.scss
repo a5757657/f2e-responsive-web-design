@@ -9,7 +9,13 @@
   flex-direction: column;
   border: 1px solid $Red-300;
   background-color: $Blue-400;
+
+  .bg{
+    z-index: 1;
+  }
+
   .title {
+    z-index: 5;
     margin-top: 160px;
     margin-bottom: 80px;
     text-align: center;
@@ -23,14 +29,14 @@
   .container {
     display: flex;
     flex-direction: column;
+    z-index: 5;
     .wrapper {
-      // position: relative;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 40px;
 
-      .bg {
-        // position: absolute;
+      .blocks {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -43,10 +49,22 @@
         @include middling {
           width: calc(max(80vw, 300px));
         }
-
         &:hover {
           transition: 0.5s ease-in;
-          top: -4px;
+          transform: translateY(-4px);
+          .word{
+            display: block;
+            background-color: $Grayscale-900;
+            opacity: 0.6;
+          }
+        }
+
+        .word{
+          display: none;
+          position: absolute;
+          -webkit-text-stroke: 1px $Grayscale-900;
+          margin-bottom: 10px;
+          @include Subheading($color: $Grayscale-0);
         }
       }
 
