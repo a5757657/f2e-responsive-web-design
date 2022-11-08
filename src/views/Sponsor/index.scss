@@ -1,4 +1,4 @@
-@import '../../styles/mixin.scss';
+@import "../../styles/mixin.scss";
 
 .Sponsor {
   width: 100%;
@@ -6,6 +6,73 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   border: 1px solid $Red-300;
-  @include Subheading
+  background-color: $Blue-400;
+  .title {
+    margin-top: 160px;
+    margin-bottom: 80px;
+    text-align: center;
+    @include Button-Semi($color: $Grayscale-0);
+    @include large() {
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    .wrapper {
+      // position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+
+      .bg {
+        // position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 288px;
+        width: 400px;
+        background-color: $Grayscale-0;
+        @include large {
+          width: calc(max(31vw, 288px));
+        }
+        @include middling {
+          width: calc(max(80vw, 300px));
+        }
+
+        &:hover {
+          transition: 0.5s ease-in;
+          top: -4px;
+        }
+      }
+
+      @include large {
+        gap: calc(max(3vw, 15px));
+      }
+      @include middling {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+      @include medium {
+        gap: 20px;
+      }
+    }
+    .cooper {
+      margin-top: 60px;
+      margin-bottom: 160px;
+      text-align: center;
+      @include Body-Semi($color: $Grayscale-0);
+      @include large() {
+        margin-top: 30px;
+        margin-bottom: 80px;
+      }
+    }
+  }
+  @include middling {
+    height: auto;
+  }
 }
