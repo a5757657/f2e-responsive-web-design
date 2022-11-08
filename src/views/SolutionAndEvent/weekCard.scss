@@ -1,0 +1,135 @@
+@import "../../styles/mixin.scss";
+.WeekCard {
+  display: flex;
+  flex-direction: column;
+
+  width: calc(65.1vw);
+  min-width: 300px;
+  max-width: 834px;
+
+  border: 1px solid #ffffff;
+  color: $Grayscale-0;
+  font-weight: 900;
+
+  .Top {
+    display: flex;
+    gap: 40px;
+    padding: 24px 62px 24px 24px;
+    align-items: center;
+    .TitleContainer {
+      .Title {
+        font-size: 80px;
+        line-height: 90px;
+        font-weight: 900;
+
+        color: $Grayscale-0;
+        -webkit-text-stroke: 1px $Grayscale-900;
+      }
+    }
+    .SubtitleContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .Subtitle {
+        font-size: 40px;
+        line-height: 60px;
+
+        color: $Grayscale-0;
+        -webkit-text-stroke: 1px $Grayscale-900;
+      }
+    }
+
+    .TagsContainer {
+      display: flex;
+      gap: 24px;
+      .Tag {
+        background: rgba(240, 240, 240, 0.25);
+        border: 1px solid $Grayscale-100;
+        padding: 8px 20px;
+
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+
+    @include large {
+      padding: 24px 26px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      .TitleContainer {
+        .Title {
+          font-size: calc(min(max(10.66vw, 40px), 90px));
+          line-height: 60px;
+        }
+      }
+      .SubtitleContainer {
+        display: flex;
+        align-items: center;
+        .Subtitle {
+          font-size: calc(min(max(6.4vw, 24px), 30px));
+          white-space: nowrap;
+        }
+        .TagsContainer {
+          justify-content: center;
+          gap: 4px;
+          .Tag {
+            font-size: calc(min(max(3.2vw, 12px), 12px));
+          }
+        }
+      }
+    }
+  }
+
+  .Bottom {
+    display: flex;
+    justify-content: space-between;
+
+    border-top: 1px solid $Grayscale-0;
+    .InfoContainer {
+      padding: 16px 23px;
+      .InfoGroup {
+        display: flex;
+
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: $Grayscale-100;
+      }
+    }
+    .DetailedButton {
+      padding: 20px 80px;
+      background-color: $Grayscale-0;
+      color: $Red-300;
+      font-size: 16px;
+      line-height: 28px;
+    }
+    @include large {
+      display: flex;
+      flex-direction: column;
+      .InfoGroup {
+        flex-direction: column;
+      }
+      .DetailedButton {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.Order1 {
+  padding-left: 80px;
+}
+.Order2 {
+  padding-left: 303px;
+}
+.Order3 {
+  padding-left: 526px;
+}
+@include large {
+  .Container {
+    padding: 0;
+  }
+}
