@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import { colors } from "../styles/global";
-import arrow from "../asset/Img/arrow.svg";
 
 const colorFilled = keyframes`
     0%{background-position:0% 50%}
