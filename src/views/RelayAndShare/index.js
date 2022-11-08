@@ -6,10 +6,13 @@ import LectureCard from "./LectureCard";
 const RelayAndShare = () => {
   return (
     <div className="RelayAndShare">
-      <div className="SectionTitle">各界大神接力分享</div>
+      <div className="TitleContainer">
+        <div className="SectionTitle">各界大神接力分享</div>
+      </div>
       <div className="CardsContainer">
-        {data.map((item) => (
+        {data.map((item, index) => (
           <LectureCard
+            key={item.title + index}
             title={item.title}
             time={item.time}
             lecturer={item.lecturer}
