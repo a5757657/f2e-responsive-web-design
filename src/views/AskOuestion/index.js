@@ -1,6 +1,19 @@
 import React from "react";
 import "./index.scss";
-// import '../../styles/global.scss';
+
+// Images
+import q11 from "../../asset/AskQuesSponsor/AskQuestion/1-1png";
+import q12 from "../../asset/AskQuesSponsor/AskQuestion/1-2png";
+import q13 from "../../asset/AskQuesSponsor/AskQuestion/1-3png";
+import q14 from "../../asset/AskQuesSponsor/AskQuestion/1-4png";
+import q21 from "../../asset/AskQuesSponsor/AskQuestion/2-1png";
+import q22 from "../../asset/AskQuesSponsor/AskQuestion/2-2png";
+import q23 from "../../asset/AskQuesSponsor/AskQuestion/2-3png";
+import q24 from "../../asset/AskQuesSponsor/AskQuestion/2-4png";
+import q31 from "../../asset/AskQuesSponsor/AskQuestion/3-1png";
+import q32 from "../../asset/AskQuesSponsor/AskQuestion/3-2png";
+import q33 from "../../asset/AskQuesSponsor/AskQuestion/3-3png";
+import q34 from "../../asset/AskQuesSponsor/AskQuestion/3-4png";
 
 const index = () => {
   return (
