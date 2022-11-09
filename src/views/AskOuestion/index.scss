@@ -1,5 +1,43 @@
 @import "../../styles/mixin.scss";
 
+@keyframes first {
+  0%,25%{
+    opacity: 1;
+  }
+  25%,100%{
+    opacity: 0;
+  }
+}
+@keyframes second {
+  0%,25%{
+    opacity: 0;
+  }
+  25%,50%{
+    opacity: 1;
+  }
+  50%,100%{
+    opacity: 0;
+  }
+}
+@keyframes third {
+  0%,50%{
+    opacity: 0;
+  }
+  50%,75%{
+    opacity: 1;
+  }
+  75%,100%{
+    opacity: 0;
+  }
+}
+@keyframes forth {
+  0%{
+    opacity: 0;
+  }
+  75%,100%{
+    opacity: 1;
+}
+}
 
 .AskOuestion {
   width: 100%;
@@ -10,28 +48,79 @@
   border: 1px solid $Red-300;
 
   .title {
+    margin-top: 160px;
+    margin-bottom: 80px;
+    text-align: center;
     @include Button-Semi($color: $Grayscale-0);
+    @include large() {
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
   }
+
   .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
     .grid {
-      // width: 100%;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
 
-      @include small() {
+      .block{
+        // display: flex;
+        // flex-direction: column;
+        .picGroup{
+          position: relative;
+          width: 400px;
+          height: 400px;
+          @include large{
+            width:  calc(max(31vw, 200px));
+            height:  calc(max(31vw, 200px));
+          }
+          @include medium{
+            width: calc(max(80vw,300px));
+            height: calc(max(80vw,300px));
+          }
+          .pic{
+            position: absolute;
+            width: 400px;
+            @include large{
+              width:  calc(max(31vw, 200px));
+            }
+            @include medium{
+              width: calc(max(80vw,300px));
+            }
+          }
+
+          .pic1{
+            animation: first 0.8s infinite;
+          }
+          .pic2{
+            animation: second 0.8s infinite;
+          }
+          .pic3{
+            animation: third 0.8s infinite;
+          }
+          .pic4{
+            animation: forth 0.8s infinite;
+          }
+        }
+        .Ques{
+          @include Button-Semi($color:$Grayscale-0);
+          -webkit-text-stroke: 2px $Grayscale-900;
+          @include large{
+            -webkit-text-stroke: 1px $Grayscale-900;
+          }
+          @include medium{
+            margin-top: 20px;
+          }
+        }
+      }
+      @include medium{
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
       }
-
-      .none {
-        display: none;
-      }
-    }
-    @include large {
-      flex-direction: column;
     }
   }
 }
