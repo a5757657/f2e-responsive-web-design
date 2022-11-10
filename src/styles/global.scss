@@ -111,7 +111,7 @@ $btn-font-weight: 900;
 
   &:hover {
     color: $Lightblue-400;
-    transition: 0.5s ease-out;
+    transition: 0.2s ease-out;
   }
 
   &:active {
@@ -119,4 +119,12 @@ $btn-font-weight: 900;
     color: $Lightblue-300;
     background: $Grayscale-100;
   }
+}
+
+.btn-tagActive{
+  min-width: 104px;
+  outline: 1px solid transparent;
+  color: $Lightblue-300;
+  background: $Grayscale-100;
+  cursor: none;
 }

@@ -55,16 +55,23 @@
       }
 
       .content{
-        .question{
-          @include Button-Semi($color: $Yellow-200);
-          margin-bottom: 16px;
-          text-align: center;
+        .FAQ,.UI,.FE,.GP{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .question{
+            @include Button-Semi($color: $Yellow-200);
+            margin-bottom: 16px;
+            text-align: center;
+          }
+          .answer{
+            @include Body($color: $Grayscale-0);
+            margin-bottom: 40px;
+            text-align: center;
+          }
         }
-        .answer{
-          @include Body($color: $Grayscale-0);
-          margin-bottom: 40px;
-          text-align: center;
-        }
+        .none{display: none;}
       }
 
       .joinBtn{

@@ -23,28 +23,28 @@ const index = () => {
         <div className="grid">
           <div className="block">
             <div className="picGroup">
-              <img id="" className="pic pic1" src="" alt=""/>
-              <img id="" className="pic pic2" src="" alt=""/>
-              <img id="" className="pic pic3" src="" alt=""/>
-              <img id="" className="pic pic4" src="" alt=""/>
+              <img id="" className="pic pic1" src={q11} alt=""/>
+              <img id="" className="pic pic2" src={q12} alt=""/>
+              <img id="" className="pic pic3" src={q13} alt=""/>
+              <img id="" className="pic pic4" src={q14} alt=""/>
             </div>
             <div className="Ques">羨慕別人的酷酷網頁動畫？</div>
           </div>
           <div className="block">
           <div className="picGroup">
-              <img id="" className="pic pic1" src="" alt=""/>
-              <img id="" className="pic pic2" src="" alt=""/>
-              <img id="" className="pic pic3" src="" alt=""/>
-              <img id="" className="pic pic4" src="" alt=""/>
+              <img id="" className="pic pic1" src={q21} alt=""/>
+              <img id="" className="pic pic2" src={q22} alt=""/>
+              <img id="" className="pic pic3" src={q23} alt=""/>
+              <img id="" className="pic pic4" src={q24} alt=""/>
             </div>
             <div className="Ques">滿足不了同事的許願？</div>
           </div>
           <div className="block">
           <div className="picGroup">
-              <img id="" className="pic pic1" src="" alt=""/>
-              <img id="" className="pic pic2" src="" alt=""/>
-              <img id="" className="pic pic3" src="" alt=""/>
-              <img id="" className="pic pic4" src="" alt=""/>
+              <img id="" className="pic pic1" src={q31} alt=""/>
+              <img id="" className="pic pic2" src={q32} alt=""/>
+              <img id="" className="pic pic3" src={q33} alt=""/>
+              <img id="" className="pic pic4" src={q34} alt=""/>
             </div>
             <div className="Ques">動畫技能樹太雜無從下手？</div>
           </div>
