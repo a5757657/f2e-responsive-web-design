@@ -19,7 +19,8 @@
   50% {
     opacity: 1;
   }
-  51%,100%{
+  51%,
+  100% {
     opacity: 0;
   }
 }
@@ -32,22 +33,25 @@
   75% {
     opacity: 1;
   }
-  76%,100%{
+  76%,
+  100% {
     opacity: 0;
   }
 }
 @keyframes forth {
-  0%, 74%{
+  0%,
+  74% {
     opacity: 0;
   }
-  75%,100% {
+  75%,
+  100% {
     opacity: 1;
   }
 }
 
 .AskQuestion {
   width: 100%;
-  // height: 100vh;
+  height: 100vh !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,8 +79,13 @@
       grid-template-columns: 1fr 1fr 1fr;
       gap: 40px;
       margin-bottom: 187px;
-
       .block {
+        &:hover {
+          .pic {
+            transition: 0.5 ease-out;
+            scale: 1.1;
+          }
+        }
         .picGroup {
           position: relative;
           width: 400px;
@@ -123,7 +132,7 @@
           align-items: center;
           @include Button-Semi($color: $Grayscale-0);
           -webkit-text-stroke: 1px $Grayscale-900;
-          @include middling{
+          @include middling {
             @include Body-Semi($color: $Grayscale-0);
           }
           @include medium {

@@ -1,7 +1,7 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import "./index.scss";
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 // Images
 import q11 from "../../asset/AskQuesSponsor/AskQuestion/1-1.png";
@@ -17,36 +17,70 @@ import q32 from "../../asset/AskQuesSponsor/AskQuestion/2-2.png";
 import q33 from "../../asset/AskQuesSponsor/AskQuestion/2-3.png";
 import q34 from "../../asset/AskQuesSponsor/AskQuestion/2-4.png";
 
-const index = () => {
+const AskQuestion = () => {
+  useEffect(() => {
+    document.addEventListener('mousemove', parallax)
+    function parallax(e) {
+      this.querySelectorAll('.tri').forEach((layer) => {
+        const speed = layer.getAttribute('data-speed')
 
-  // useLayoutEffect(()=>{
-  //   const context = gsap.context(()=>{
-  //     gsap.registerPlugin(ScrollTrigger)
-  //       gsap.utils.toArray(".block").forEach((e, i)=>{
-  //         ScrollTrigger.create({
-  //           ScrollTrigger:"title",
-  //           markers: true,
-  //           start: "top 100%",
-  //           end: "top 0%",
-  //           onEnter:()=>{
-  //             gsap.fromTo(
-  //               e,
-  //               {x:0, y:100, opacity:0,visibility:"hidden",duration:2,},
-  //               {x:0, y:0, visibility:"visible",opacity:"1",duration:2,ease:"expo",overwrite:"auto"}
-  //             );
-  //           },
-  //         })
-  //       })
-  //   },'.App');
-  //   return() => context.revert();
-  // },[])
-  
+        const x = (window.innerWidth - e.pageX * speed) / 25
+        const y = (window.innerHeight - e.pageY * speed) / 25
+
+        layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+      })
+    }
+  })
+
+  useLayoutEffect(() => {
+    const context = gsap.context(() => {
+      gsap.registerPlugin(ScrollTrigger);
+      // gsap.utils.toArray(".tri").forEach((e, i) => {
+      //   ScrollTrigger.create({
+      //     trigger: e,
+      //     start: "top 100%",
+      //     end: "top 0%",
+      //     onEnter: () => {
+      //       gsap.fromTo(
+      //         e,
+      //         { x: 0, y: -100, opacity: 0, visibility: "hidden", duration: 2 },
+      //         {
+      //           duration: 2,
+      //           x: 0,
+      //           y: 0,
+      //           visibility: "visible",
+      //           opacity: "1",
+      //           ease: "expo",
+      //           overwrite: "auto",
+      //         }
+      //       );
+      //     },
+      //   });
+      // });
+
+      const scrollTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".AskQuestion",
+          start: "top 40%",
+          end: "top 15%",
+          scrub: true,
+          // markers: true,
+        },
+      });
+      scrollTL
+        .from(".tri1", { y: -50, duration: 1 })
+        .from(".tri2", { y: -50, duration: 1 })
+        .from(".tri3", { y: -50, duration: 1 });
+    }, ".App");
+    return () => context.revert();
+  }, []);
+
   return (
-    <div className="AskQuestion">
+    <div className="AskQuestion" id="AskQuestion">
       <div className="title">你是否也有以下困擾？</div>
       <div className="container">
         <div className="grid">
-          <div className="block tri1">
+          <div className="block tri tri1" data-speed='1'>
             <div className="Ques large">羨慕別人的酷酷網頁動畫？</div>
             <div className="picGroup">
               <img id="" className="pic pic1" src={q11} alt="" />
@@ -56,7 +90,7 @@ const index = () => {
             </div>
             <div className="Ques small">羨慕別人的酷酷網頁動畫？</div>
           </div>
-          <div className="block tri2">
+          <div className="block tri tri2" data-speed='1'>
             <div className="picGroup">
               <img id="" className="pic pic1" src={q21} alt="" />
               <img id="" className="pic pic2" src={q22} alt="" />
@@ -65,7 +99,7 @@ const index = () => {
             </div>
             <div className="Ques">滿足不了同事的許願？</div>
           </div>
-          <div className="block tri3">
+          <div className="block tri tri3" data-speed='1'>
             <div className="Ques large">動畫技能樹太雜無從下手？</div>
             <div className="picGroup">
               <img id="" className="pic pic1" src={q31} alt="" />
@@ -81,4 +115,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default AskQuestion;

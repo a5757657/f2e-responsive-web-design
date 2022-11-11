@@ -5,8 +5,12 @@ import "./index.scss";
 import left from "../../asset/AskQuesSponsor/FAQ/FAQ_L.png";
 import right from "../../asset/AskQuesSponsor/FAQ/FAQ_R.png";
 
+// Link
+const join ="https://2022.thef2e.com/";
+
 const Faq = () => {
   const [question, setQuestion] = useState("FAQ");
+
   return (
     <div className="Faq">
       <div className="title">
@@ -331,9 +335,11 @@ const Faq = () => {
             </div>
           </div>
           <div className="joinBtn">
-            <button className="btn btn-cta join">
-              別擔心太多。報名，就對了
-            </button>
+            <a href={join}>
+              <button className="btn btn-cta join">
+                別擔心太多。報名，就對了
+              </button>
+            </a>
           </div>
         </div>
       </div>
