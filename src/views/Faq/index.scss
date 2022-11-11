@@ -77,7 +77,7 @@
         top: -165px;
         right: calc(min(20vw, 370px));
       }
-      @include middling {
+      @include medium-large {
         #left {
           width: calc(min(max(27vw, 150px), 250px));
         }
@@ -94,7 +94,7 @@
         top: -165px;
         right: calc(max(-36vw, -565px));
       }
-      @include middling {
+      @include medium-large {
         #right {
           width: calc(min(max(27vw, 150px), 250px));
         }

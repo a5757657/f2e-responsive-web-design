@@ -21,7 +21,7 @@
       @include large {
         width: calc(min(5vw, 98px));
       }
-      @include middling {
+      @include medium-large {
         width: calc(max(8vw, 50px));
       }
     }
@@ -33,7 +33,7 @@
         top: 90px;
         left: -95px;
       }
-      @include middling {
+      @include medium-large {
         width: calc(max(6vw, 40px));
       }
     }
@@ -45,7 +45,7 @@
         top: 105px;
         left: 40px;
       }
-      @include middling {
+      @include medium-large {
         width: calc(max(6vw, 40px));
       }
     }
@@ -84,7 +84,7 @@
         @include large {
           width: calc(max(31vw, 288px));
         }
-        @include middling {
+        @include medium-large {
           width: calc(max(80vw, 300px));
         }
         &:hover {
@@ -111,7 +111,7 @@
       @include large {
         gap: calc(max(3vw, 15px));
       }
-      @include middling {
+      @include medium-large {
         grid-template-columns: none;
         grid-template-rows: 1fr 1fr 1fr;
       }
@@ -130,7 +130,7 @@
       }
     }
   }
-  @include middling {
+  @include medium-large {
     height: auto;
   }
 }

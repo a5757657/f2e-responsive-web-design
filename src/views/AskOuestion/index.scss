@@ -131,7 +131,7 @@
           align-items: center;
           @include Button-Semi($color: $Grayscale-0);
           -webkit-text-stroke: 1px $Grayscale-900;
-          @include middling {
+          @include medium-large {
             @include Body-Semi($color: $Grayscale-0);
           }
           @include medium {
