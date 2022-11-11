@@ -19,27 +19,27 @@ import q34 from "../../asset/AskQuesSponsor/AskQuestion/2-4.png";
 
 const index = () => {
 
-  useLayoutEffect(()=>{
-    const context = gsap.context(()=>{
-      gsap.registerPlugin(ScrollTrigger)
-        gsap.utils.toArray(".block").forEach((e, i)=>{
-          ScrollTrigger.create({
-            ScrollTrigger:"title",
-            markers: true,
-            start: "top 100%",
-            end: "top 0%",
-            onEnter:()=>{
-              gsap.fromTo(
-                e,
-                {x:0, y:100, opacity:0,visibility:"hidden",duration:2,},
-                {x:0, y:0, visibility:"visible",opacity:"1",duration:2,ease:"expo",overwrite:"auto"}
-              );
-            },
-          })
-        })
-    },'.App');
-    return() => context.revert();
-  },[])
+  // useLayoutEffect(()=>{
+  //   const context = gsap.context(()=>{
+  //     gsap.registerPlugin(ScrollTrigger)
+  //       gsap.utils.toArray(".block").forEach((e, i)=>{
+  //         ScrollTrigger.create({
+  //           ScrollTrigger:"title",
+  //           markers: true,
+  //           start: "top 100%",
+  //           end: "top 0%",
+  //           onEnter:()=>{
+  //             gsap.fromTo(
+  //               e,
+  //               {x:0, y:100, opacity:0,visibility:"hidden",duration:2,},
+  //               {x:0, y:0, visibility:"visible",opacity:"1",duration:2,ease:"expo",overwrite:"auto"}
+  //             );
+  //           },
+  //         })
+  //       })
+  //   },'.App');
+  //   return() => context.revert();
+  // },[])
   
   return (
     <div className="AskQuestion">

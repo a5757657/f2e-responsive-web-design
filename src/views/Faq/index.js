@@ -62,10 +62,8 @@ const Faq = () => {
               團體組
             </button>
           </div>
-          {/* <div className="content"> */}
-          <div className={`content ${FAQ?"turnFAQ":""} ${UI?"turnUI":""} ${FE?"turnFE":""} ${GP?"turnGP":""}`}>
-            {/* <div className={`FAQ ${question === "FAQ" ? "" : "none"}`}> */}
-            <div className="FAQ">
+          <div className="content">
+            <div className={`FAQ ${question === "FAQ" ? "" : "none"}`}>
               <div className="pair">
                 <div className="question">
                   如果某一週不小心挑戰失敗，是否能再繼續挑戰後面關卡？
@@ -99,8 +97,7 @@ const Faq = () => {
                 </div>
               </div>
             </div>
-            {/* <div className={`UI ${question === "UI" ? "" : "none"}`}> */}
-            <div className="UI">
+            <div className={`UI ${question === "UI" ? "" : "none"}`}>
               <div className="pair">
                 <div className="question">
                   到時投稿到平台是提供什麼呢？我也不像是工程師可以有
@@ -199,8 +196,7 @@ const Faq = () => {
                 </div>
               </div>
             </div>
-            {/* <div className={`FE ${question === "FE" ? "" : "none"}`}> */}
-            <div className="FE">
+            <div className={`FE ${question === "FE" ? "" : "none"}`}>
               <div className="pair">
                 <div className="question">
                   我可以不依照設計稿，自己做版面嗎？因為我想多練習 JS / 後端
@@ -256,8 +252,7 @@ const Faq = () => {
                 </div>
               </div>
             </div>
-            {/* <div className={`GP ${question === "GP" ? "" : "none"}`}> */}
-            <div className="GP">
+            <div className={`GP ${question === "GP" ? "" : "none"}`}>
               <div className="pair">
                 <div className="question">請問團體組最多幾人？</div>
                 <div className="answer">
@@ -293,7 +288,7 @@ const Faq = () => {
                     但評審門檻僅限 Web 瀏覽器應用開發，Android、iOS APP
                     則不在評審範圍內，故不符合評審門檻。
                   </div>
-                  <div className="samll">
+                  <div className="small">
                     您可以開發手機APP，若有在期限前投稿也能獲得數位獎狀。但評審門檻僅限
                     Web 瀏覽器應用開發，Android、iOS APP
                     則不在評審範圍內，故不符合評審門檻。
@@ -317,10 +312,12 @@ const Faq = () => {
                     做最大的加值整合應用，甚至搭配後端應用，整合多個外部 API
                     也是可以的。
                   </div>
-                  <div className="small">可以的，只要能透過網頁瀏覽器操控您的服務，並有使用到 TDX API
-                  的任何一個 API，您可以依照本次主題「全台公車動態時刻查詢應用服務」做最大的加值整合應用，甚至搭配後端應用，整合多個外部
-                  API 也是可以的。</div>
-                  
+                  <div className="small">
+                    可以的，只要能透過網頁瀏覽器操控您的服務，並有使用到 TDX API
+                    的任何一個
+                    API，您可以依照本次主題「全台公車動態時刻查詢應用服務」做最大的加值整合應用，甚至搭配後端應用，整合多個外部
+                    API 也是可以的。
+                  </div>
                 </div>
               </div>
               <div className="pair">
