@@ -2,7 +2,7 @@
 
 .Sponsor {
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,8 +10,46 @@
   border: 1px solid $Red-300;
   background-color: $Blue-400;
 
+
   .bg{
     z-index: 1;
+    position: relative;
+    .star{
+      position: absolute;
+    }
+    #star1{
+      left: -10px;
+      @include large {
+        width: calc(min(5vw, 98px));
+      }
+      @include middling {
+        width: calc(max(8vw, 50px));
+      }
+    }
+    #star2{
+      top: 160px;
+      left: -115px;
+      @include large {
+        width: calc(min(4vw, 76px));
+        top: 90px;
+        left: -95px;
+      }
+      @include middling {
+        width: calc(max(6vw, 40px));
+      }
+    }
+    #star3{
+      top: 185px;
+      left: 35px;
+      @include large {
+        width: calc(min(4vw, 76px));
+        top: 105px;
+        left: 40px;
+      }
+      @include middling {
+        width: calc(max(6vw, 40px));
+      }
+    }
   }
 
   .title {
@@ -55,7 +93,8 @@
           transform: translateY(-4px);
           .word{
             display: block;
-            background-color: rgba($color: $Grayscale-900, $alpha: 0.6);
+            line-height: 288px;
+            background-color: rgba($color: $Grayscale-900, $alpha: 0.8);
           }
         }
 
@@ -65,7 +104,7 @@
           display: none;
           position: absolute;
           text-align: center;
-          -webkit-text-stroke: 2px $Grayscale-900;
+          -webkit-text-stroke: 1px $Grayscale-900;
           @include Subheading($color: $Grayscale-0);
         }
       }

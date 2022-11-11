@@ -1,10 +1,11 @@
 import React from "react";
 import "./index.scss";
-import AOS from "aos";
-import "aos/dist/aos.css";
 // import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 // Images
+import star1 from "./../../asset/AskQuesSponsor/Sponsor/1.png";
+import star2 from "./../../asset/AskQuesSponsor/Sponsor/2.png";
+import star3 from "./../../asset/AskQuesSponsor/Sponsor/3.png";
 import block from "./../../asset/AskQuesSponsor/Sponsor/BlockStudio.png";
 import titan from "./../../asset/AskQuesSponsor/Sponsor/TitanSoft.png";
 import kdan from "./../../asset/AskQuesSponsor/Sponsor/KDAN.png";
@@ -17,7 +18,11 @@ const blockLink = "https://blockstudio.tw";
 const Sponsor = () => {
   return (
     <div className="Sponsor">
-      <div className="bg">{/* <img src=""/> */}</div>
+      <div className="bg">
+        <img id="star1" className="star" src={star1} alt="星星" />
+        <img id="star2" className="star" src={star2} alt="星星" />
+        <img id="star3" className="star" src={star3} alt="星星" />
+      </div>
       <div className="title">贊助單位</div>
       <div className="container">
         <div className="wrapper">
