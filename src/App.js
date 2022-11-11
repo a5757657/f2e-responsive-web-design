@@ -11,15 +11,10 @@ import RelayAndShare from './views/RelayAndShare';
 import SolutionAndEvent from './views/SolutionAndEvent'
 import Sponsor from './views/Sponsor'
 
-/* --------------範例測試 -----------*/
-import ButtonTest from "./views/ButtonTest"
-/* --------------範例測試 -----------*/
-
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <ButtonTest />
       <Banner />
       <AskQuestion />
       <BreakTheQuestion />
