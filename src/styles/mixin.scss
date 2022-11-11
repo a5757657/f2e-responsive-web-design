@@ -9,7 +9,7 @@
     @content;
   }
 }
-@mixin middling {
+@mixin medium-large {
   @media (max-width: 960px) {
     @content;
   }
