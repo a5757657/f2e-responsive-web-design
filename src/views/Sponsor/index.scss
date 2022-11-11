@@ -89,7 +89,7 @@
           width: calc(max(80vw, 300px));
         }
         &:hover {
-          transition: 0.5s ease-in;
+          transition: 0.2s ease-in;
           transform: translateY(-4px);
           .word{
             display: block;
