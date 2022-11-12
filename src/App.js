@@ -11,7 +11,6 @@ import RelayAndShare from './views/RelayAndShare';
 import SolutionAndEvent from './views/SolutionAndEvent'
 import Sponsor from './views/Sponsor'
 
-
 function App() {
   return (
     <div className="App">

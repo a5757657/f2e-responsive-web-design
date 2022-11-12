@@ -1,11 +1,134 @@
-@import '../../styles/mixin.scss';
+@import "../../styles/mixin.scss";
 
 .Awards {
   width: 100%;
   height: 100vh;
+  background-color: $Blue-400;
   display: flex;
-  justify-content: center;
   align-items: center;
-  border: 1px solid $Red-300;
-  @include Subheading
+  position: relative;
+  overflow: hidden;
+  @include large {
+    padding: 100px 38px;
+    height: fit-content;
+  }
+  .container {
+    width: 100%;
+    z-index: 1;
+    .fade-in-right {
+      opacity: 0;
+    }
+    // 區區修煉已經無法滿足了嗎？還有比賽等著你！
+    p {
+      //margin-top: 161px;
+      text-align: center;
+      @include Button-Semi($color: $Grayscale-800);
+    }
+    // 評審機制
+    h2 {
+      margin-top: 80px;
+      text-align: center;
+      -webkit-text-stroke: 1.5px $Grayscale-900;
+      @include Subheading($color: $Grayscale-0);
+    }
+    .selectionWrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      column-gap: 40px;
+      @include large {
+        flex-direction: column;
+        width: 100%;
+        row-gap: 20px;
+      }
+      .awards {
+        width: 480px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+        background-color: $Grayscale-800;
+        padding: 32px 74px;
+        @include large {
+          width: 100%;
+          padding: 32px;
+        }
+        h3 {
+          @include Button-Semi($color: $Grayscale-0);
+        }
+        p {
+          text-align: center;
+          margin-top: 0;
+          @include Body($color: $Grayscale-0);
+        }
+      }
+    }
+    .titleWrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 60px;
+      column-gap: 16px;
+      // 獎項
+      h2 {
+        margin: 0;
+      }
+      // 皆含數位獎狀
+      span {
+        @include Body($color: $Grayscale-700);
+      }
+    }
+    .awardsWrap {
+      padding-top: 56px;
+      display: flex;
+      justify-content: center;
+      column-gap: 40px;
+      @include large {
+        flex-direction: column;
+        width: 100%;
+        row-gap: 20px;
+      }
+      .awards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px;
+        width: 306.67px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        background-color: $Yellow-300;
+        @include large {
+          width: 100%;
+          padding: 32px;
+        }
+        h3 {
+          height: 36px;
+          padding: 0 16px;
+          @include Button-Semi($color: $Grayscale-0);
+        }
+        p {
+          margin-top: 0;
+          @include Body($color: $Grayscale-0);
+        }
+        &:nth-child(2) {
+          background-color: $Blue-300;
+        }
+        &:nth-child(3) {
+          background-color: $Red-400;
+        }
+      }
+    }
+  }
+  .bg {
+    scale: 350%;
+    background: url('./../../asset/Awards/images/白色底圖.png') no-repeat center;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include large {
+      background-size: contain;
+    }
+  }
 }

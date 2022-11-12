@@ -1,0 +1,52 @@
+@import "./../styles/mixin.scss";
+.ButtonContainer {
+  position: relative;
+  cursor: pointer;
+  &:active {
+    color: $Yellow-300;
+  }
+  &:disabled {
+    opacity: 50%;
+  }
+  &:hover {
+    .ButtonFilled {
+      width: 100%;
+      .ButtonText {
+        width: 100%;
+      }
+    }
+  }
+  .Button {
+    width: 300px;
+    height: 44px;
+    background-color: $Grayscale-0;
+    color: $Blue-300;
+    position: relative;
+    .ButtonText {
+      padding: 8px 118px;
+      font-size: 16px;
+      line-height: 28px;
+    }
+    &:active {
+      color: $Yellow-300;
+    }
+  }
+  .ButtonFilled {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    width: 0px;
+    background-color: $Blue-500;
+    color: $Blue-100;
+    transition: width 0.8s ease-in-out;
+    .ButtonText {
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0px;
+      transition: width 0.8s ease-in-out;
+    }
+    &:active {
+      color: $Yellow-300;
+    }
+  }
+}

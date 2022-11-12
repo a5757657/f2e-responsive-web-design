@@ -1,11 +1,73 @@
-@import '../../styles/mixin.scss';
+@import "../../styles/mixin.scss";
 
 .BreakTheQuestion {
   width: 100%;
-  height: 100vh;
+  height: 100vh !important;
+  border: 1px solid $Red-300;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid $Red-300;
-  @include Subheading
+  background-color: $Blue-300;
+  overflow: hidden;
+  .title {
+    text-align: center;
+    @include Button-Semi($color: $Grayscale-0);
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    .UI,
+    .FE {
+      width: 578px;
+      height: 578px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+      div {
+        -webkit-text-stroke: 2px $Grayscale-900;
+        margin-bottom: 54px;
+        z-index: 1;
+        @include Head($color: $Grayscale-0);
+      }
+    }
+    @include large {
+      .UI,
+      .FE {
+        width: 375px;
+        height: 375px;
+        img {
+          width: 375px;
+          height: 375px;
+        }
+        div {
+          -webkit-text-stroke: 1px $Grayscale-900;
+          @include Subheading($color: $Grayscale-0);
+        }
+      }
+    }
+    @include medium {
+      flex-direction: column;
+      .UI,
+      .FE {
+        width: 375px;
+        height: 375px;
+        img {
+          width: 375px;
+          height: 375px;
+        }
+        div {
+          -webkit-text-stroke: 1px $Grayscale-900;
+          @include Subheading($color: $Grayscale-0);
+        }
+      }
+    }
+  }
 }
