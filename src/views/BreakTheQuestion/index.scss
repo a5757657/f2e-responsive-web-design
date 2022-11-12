@@ -39,6 +39,21 @@
       }
     }
     @include large {
+      .UI,
+      .FE {
+        width: 375px;
+        height: 375px;
+        img {
+          width: 375px;
+          height: 375px;
+        }
+        div {
+          -webkit-text-stroke: 1px $Grayscale-900;
+          @include Subheading($color: $Grayscale-0);
+        }
+      }
+    }
+    @include medium {
       flex-direction: column;
       .UI,
       .FE {
