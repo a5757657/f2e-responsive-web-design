@@ -2,7 +2,6 @@ import React, { useEffect, useLayoutEffect } from "react";
 import "./index.scss";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 // Images
 import star1 from "./../../asset/AskQuesSponsor/Sponsor/1.png";
