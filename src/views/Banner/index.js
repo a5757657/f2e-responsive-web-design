@@ -1,7 +1,5 @@
 import React, { useLayoutEffect } from "react";
-import styled from "styled-components";
 import "./index.scss";
-import { colors } from "../../styles/global";
 import purple from "../../asset/Img/purple.svg";
 import blue from "../../asset/Img/blue.svg";
 import green from "../../asset/Img/green.svg";
@@ -70,7 +68,7 @@ const Banner = () => {
         </div>
         <div className="ActionContainer">
           <p className="ActionText">創造 屬於你的互動</p>
-          <Btn>我要報名</Btn>
+          <Btn content="我要報名" />
           <img src={arrowDown} alt="arrowDown" />
         </div>
       </div>
