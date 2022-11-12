@@ -1,11 +1,161 @@
-@import '../../styles/mixin.scss';
+@import "../../styles/mixin.scss";
 
-.AskOuestion {
+@keyframes first {
+  0%,
+  25% {
+    opacity: 1;
+  }
+  26%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes second {
+  0%,
+  24% {
+    opacity: 0;
+  }
+  25%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes third {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  75% {
+    opacity: 1;
+  }
+  76%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes forth {
+  0%,
+  74% {
+    opacity: 0;
+  }
+  75%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.AskQuestion {
   width: 100%;
-  height: 100vh;
+  height: 100vh !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid $Red-300;
-  @include Subheading;
+  flex-direction: column;
+  background: linear-gradient($Blue-200, $Blue-300);
+
+  .title {
+    margin-top: 160px;
+    margin-bottom: 80px;
+    text-align: center;
+    @include Button-Semi($color: $Grayscale-0);
+    @include large() {
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 187px;
+      .block {
+        &:hover {
+          .pic {
+            transition: 0.5 ease-out;
+            scale: 1.1;
+          }
+        }
+        .picGroup {
+          position: relative;
+          width: 400px;
+          height: 400px;
+          @include large {
+            width: calc(max(30vw, 200px));
+            height: calc(max(30vw, 200px));
+          }
+          @include medium {
+            width: calc(max(80vw, 300px));
+            height: calc(max(80vw, 300px));
+          }
+          .pic {
+            position: absolute;
+            width: 400px;
+            @include large {
+              width: calc(max(30vw, 200px));
+            }
+            @include medium {
+              width: calc(max(80vw, 300px));
+            }
+          }
+
+          .pic1 {
+            opacity: 1;
+            animation: first 0.8s infinite;
+          }
+          .pic2 {
+            opacity: 0;
+            animation: second 0.8s infinite;
+          }
+          .pic3 {
+            opacity: 0;
+            animation: third 0.8s infinite;
+          }
+          .pic4 {
+            opacity: 0;
+            animation: forth 0.8s infinite;
+          }
+        }
+        .Ques {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include Button-Semi($color: $Grayscale-0);
+          -webkit-text-stroke: 1px $Grayscale-900;
+          @include medium-large {
+            @include Body-Semi($color: $Grayscale-0);
+          }
+          @include medium {
+            margin-top: 20px;
+            @include Button-Semi($color: $Grayscale-0);
+          }
+        }
+        .large {
+          @include medium {
+            display: none;
+          }
+        }
+        .small {
+          display: none;
+          @include medium {
+            display: flex;
+          }
+        }
+      }
+      @include medium {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin-bottom: 119px;
+      }
+    }
+  }
 }

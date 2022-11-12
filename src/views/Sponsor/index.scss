@@ -1,11 +1,136 @@
-@import '../../styles/mixin.scss';
+@import "../../styles/mixin.scss";
 
 .Sponsor {
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid $Red-300;
-  @include Subheading
+  flex-direction: column;
+  background-color: $Blue-400;
+
+
+  .bg{
+    z-index: 1;
+    position: relative;
+    .star{
+      position: absolute;
+    }
+    #star1{
+      left: -10px;
+      @include large {
+        width: calc(min(5vw, 98px));
+      }
+      @include medium-large {
+        width: calc(max(8vw, 50px));
+      }
+    }
+    #star2{
+      top: 160px;
+      left: -115px;
+      @include large {
+        width: calc(min(4vw, 76px));
+        top: 90px;
+        left: -95px;
+      }
+      @include medium-large {
+        width: calc(max(6vw, 40px));
+      }
+    }
+    #star3{
+      top: 185px;
+      left: 35px;
+      @include large {
+        width: calc(min(4vw, 76px));
+        top: 105px;
+        left: 40px;
+      }
+      @include medium-large {
+        width: calc(max(6vw, 40px));
+      }
+    }
+  }
+
+  .title {
+    z-index: 5;
+    margin-top: 160px;
+    margin-bottom: 80px;
+    text-align: center;
+    @include Button-Semi($color: $Grayscale-0);
+    @include large() {
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+
+      .blocks {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 288px;
+        width: 400px;
+        margin-bottom: 10px;
+        background-color: $Grayscale-0;
+        @include large {
+          width: calc(max(31vw, 288px));
+        }
+        @include medium-large {
+          width: calc(max(80vw, 300px));
+        }
+        &:hover {
+          transition: 0.2s ease-in;
+          transform: translateY(-4px);
+          .word{
+            display: block;
+            line-height: 288px;
+            background-color: rgba($color: $Grayscale-900, $alpha: 0.8);
+          }
+        }
+
+        .word{
+          width: 100%;
+          height: 100%;
+          display: none;
+          position: absolute;
+          text-align: center;
+          -webkit-text-stroke: 1px $Grayscale-900;
+          @include Subheading($color: $Grayscale-0);
+        }
+      }
+
+      @include large {
+        gap: calc(max(3vw, 15px));
+      }
+      @include medium-large {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+      @include medium {
+        gap: 20px;
+      }
+    }
+    .cooper {
+      margin-top: 60px;
+      margin-bottom: 160px;
+      text-align: center;
+      @include Body-Semi($color: $Grayscale-0);
+      @include large() {
+        margin-top: 30px;
+        margin-bottom: 80px;
+      }
+    }
+  }
+  @include medium-large {
+    height: auto;
+  }
 }

@@ -76,6 +76,7 @@ $btn-font-weight: 900;
     size: 400%;
   }
   transition: background 0.5s ease-in;
+  cursor: pointer;
 
   &:hover {
     background-position: 0;
@@ -105,18 +106,28 @@ $btn-font-weight: 900;
 // 區塊九 tag-btn
 .btn-tag {
   min-width: 104px;
-  outline: 1px solid transparent;
-  color: $Lightblue-300;
-  background: $Grayscale-100;
+  outline: 1px solid $Grayscale-100;
+  background-color: rgba(240, 240, 240, .25);
+  color: $Grayscale-100;
+  cursor: pointer;
 
   &:hover {
     color: $Lightblue-400;
-    transition: 0.5s ease-out;
+    background: $Grayscale-100;
+    transition: 0.2s ease-out;
   }
 
   &:active {
-    outline: 1px solid $Grayscale-100;
-    background-color: rgba(240, 240, 240, .25);
-    color: $Grayscale-100;
+    outline: 1px solid transparent;
+    color: $Lightblue-300;
+    background: $Grayscale-100;
   }
+}
+
+.btn-tagActive{
+  min-width: 104px;
+  outline: 1px solid transparent;
+  color: $Lightblue-300;
+  background: $Grayscale-100;
+  cursor: auto;
 }

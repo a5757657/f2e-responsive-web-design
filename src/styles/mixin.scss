@@ -31,7 +31,7 @@
 }
 
 // 顏色
-$Grayscale-900: #0d0d0d;
+$Grayscale-900: rgb(13, 13, 13);
 $Grayscale-800: #333333;
 $Grayscale-700: #555555;
 $Grayscale-600: #888888;
@@ -57,8 +57,8 @@ $Yellow-100: #f9e8bd;
 
 $Blue-500: #103550;
 $Blue-400: #1f6496;
-$Blue-300: #3492d6;
-$Blue-200: #7bb8e4;
+$Blue-300: hsl(205, 66%, 52%);
+$Blue-200: rgb(123, 184, 228);
 $Blue-100: #c2def2;
 
 $Lightblue-500: #1a383e;
