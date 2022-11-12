@@ -101,7 +101,7 @@ const SolutionAndEvent = () => {
           </div>
         </div>
       </div>
-      <div className="ButtonContainer">
+      <div className="TheButtonContainer">
         <Btn content="我要報名" />
       </div>
     </div>
