@@ -3,10 +3,38 @@ import "./index.scss";
 import WeekCard from "./WeekCard";
 import { data } from "./data";
 import { Btn } from "../../components/Button";
+import pink from "../../asset/Img/pink_opacity.svg";
+import green from "../../asset/Img/green_opacity.svg";
+import purple from "../../asset/Img/purple_opacity.svg";
+import blue from "../../asset/Img/blue_opacity.svg";
+import curlyLine from "../../asset/Img/curlyLine_opacity.svg";
+import stars from "../../asset/Img/stars.svg";
 
 const SolutionAndEvent = () => {
   return (
     <div className="SolutionAndEvent">
+      <div className="BackgroundContainer">
+        <img
+          className="BackgroundElement blue"
+          src={blue}
+          alt="backgroundElement"
+        />
+        <img
+          className="BackgroundElement curlyLine"
+          src={curlyLine}
+          alt="backgroundElement"
+        />
+        <img
+          className="BackgroundElement purple"
+          src={purple}
+          alt="backgroundElement"
+        />
+        <img
+          className="BackgroundElement stars"
+          src={stars}
+          alt="backgroundElement"
+        />
+      </div>
       <div className="Main">
         <div className="SectionTitle">年度最強合作，三大主題來襲</div>
         <div className="SectionSubtitle">
