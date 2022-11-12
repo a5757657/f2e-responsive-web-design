@@ -1,5 +1,39 @@
 @import "../../styles/mixin.scss";
 
+@keyframes float {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-7px, -5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes float2 {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(3px, -8px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+@keyframes floatBlue {
+  0% {
+    transform: translate(-50%);
+  }
+  50% {
+    transform: translate(-49.7%, 8px);
+  }
+  100% {
+    transform: translate(-50%);
+  }
+}
+
 .Banner {
   width: 100%;
   min-width: 375px;
@@ -20,11 +54,13 @@
 
     .BackgroundImageElement {
       position: absolute;
+      animation: float 3.2s ease-in-out infinite;
     }
 
     .purple {
       left: calc(50% - 771px / 2 - 474.5px);
       top: -113px;
+      animation-delay: 0.2s;
       @include medium {
         width: 564px;
         top: -143px;
@@ -35,6 +71,7 @@
     .pink {
       left: calc(min(max(11.7vw, 42px), 169px));
       top: 364px;
+      animation: float2 3.2s ease-in-out infinite;
       @include medium {
         top: 250px;
         width: 291px;
@@ -44,17 +81,21 @@
       width: calc(min(max(61.11vw, 522px), 880px));
       left: calc(min(max(19.44vw, -73px), 280px));
       top: 94px;
+      animation-delay: 0.9s;
       @include medium {
         width: 522px;
         top: 80px;
         left: 50%;
         transform: translate(-50%, 0);
+        animation: floatBlue 2.9s ease-in-out infinite;
       }
     }
     .green {
       width: calc(min(max(79.16vw, 422px), 1140px));
       top: -297px;
       left: calc(min(max(42.57vw, 164px), 613px));
+      animation: float2 3.2s ease-in-out infinite;
+      animation-delay: 1.3s;
       @include medium {
         top: -74px;
         width: 422px;
