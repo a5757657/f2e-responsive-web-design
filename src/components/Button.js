@@ -1,42 +1,21 @@
 import React from "react";
-import styled, { keyframes } from "styled-components";
-import { colors } from "../styles/global";
-import arrow from "../asset/Img/arrow.svg";
+import "./Button.scss";
 
-const colorFilled = keyframes`
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-`;
-
-export const Btn = styled.button`
-  width: 288px;
-  height: 44px;
-  background: linear-gradient(to right, black 50%, white 50%);
-  color: ${colors.Blue300};
-  background-size: 400% 400%;
-  background-position: right bottom;
-  transition: all 1s ease;
-  border: none;
-  position: relative;
-
-  &:active {
-    color: ${colors.Yellow300};
-  }
-  &:disabled {
-    opacity: 50%;
-  }
-
-  &:hover {
-    background-position: left bottom;
-    color: ${colors.Grayscale0};
-    /* animation: ${colorFilled} 3s ease forwards;
-    -webkit-animation: ${colorFilled} 3s ease forwards; */
-  }
-`;
-
-const Button = () => {
-  return <div>Button</div>;
+export const Btn = (props) => {
+  const { content } = props;
+  return (
+    <div
+      className="ButtonContainer"
+      onClick={() => window.open("https://2022.thef2e.com/", "_blank")}
+    >
+      <div className="Button">
+        <div className="ButtonText">{content}</div>
+      </div>
+      <div className="Button ButtonFilled">
+        <div className="ButtonText">{content}</div>
+      </div>
+    </div>
+  );
 };
 
-export default Button;
+export default Btn;
