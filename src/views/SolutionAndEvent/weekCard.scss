@@ -29,6 +29,7 @@
         .DetailedButtonContainer {
           .ButtonFilled {
             width: 100%;
+            opacity: 1;
           }
         }
       }
@@ -122,7 +123,9 @@
         .TitleContainer {
           .Title {
             font-size: calc(min(max(10.66vw, 40px), 90px));
-            line-height: 60px;
+          }
+          .TitleFilled {
+            width: 0px;
           }
         }
         .SubtitleContainer {
@@ -182,6 +185,7 @@
           overflow: hidden;
           background-color: $Blue-300;
           color: $Grayscale-0;
+          opacity: 0;
           transition: width 0.8s ease-in-out;
         }
       }
@@ -191,9 +195,15 @@
         .InfoGroup {
           flex-direction: column;
         }
-        .DetailedButton {
-          display: flex;
-          justify-content: center;
+        .DetailedButtonContainer {
+          .DetailedButton {
+            display: flex;
+            justify-content: center;
+          }
+          .ButtonFilled {
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+          }
         }
       }
     }

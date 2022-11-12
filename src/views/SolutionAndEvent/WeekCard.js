@@ -52,10 +52,10 @@ const WeekCard = (props) => {
           </div>
           <div className="DetailedButtonContainer">
             <div className="DetailedButton">
-              <p className="ButtonText">關卡細節</p>
+              <div className="ButtonText">關卡細節</div>
             </div>
             <div className="DetailedButton ButtonFilled">
-              <p className="ButtonText">關卡細節</p>
+              <div className="ButtonText">關卡細節</div>
             </div>
           </div>
         </div>
