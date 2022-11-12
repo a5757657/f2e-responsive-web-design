@@ -1,5 +1,17 @@
 @import "../../styles/mixin.scss";
 
+@keyframes float {
+  0% {
+    transform: translate(0px);
+  }
+  50% {
+    transform: translate(-7px, -5px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
+
 .SolutionAndEvent {
   width: 100%;
   display: flex;
@@ -27,14 +39,22 @@
       }
     }
     .blue {
-      width: 880px;
-      left: calc(50% - 880px / 2 - 370px);
-      top: 429px;
+      width: 1376px;
+      left: calc(50% - 1376px / 2 - 686px);
+      top: 560px;
+      animation: float 3.2s ease-in-out infinite;
+      &:hover {
+        animation: float 0.6s ease-in-out infinite;
+      }
     }
     .purple {
       width: 926px;
       left: calc(50% - 926px / 2 + 408px);
       top: 109px;
+      animation: float 2.2s ease-in-out infinite;
+      &:hover {
+        animation: float 0.6s ease-in-out infinite;
+      }
     }
     .stars {
       width: 308px;
@@ -45,6 +65,24 @@
       width: 401px;
       left: calc(50% - 401px / 2 - 476.5px);
       top: 786px;
+    }
+    .green {
+      width: 1224px;
+      left: calc(50% - 1224px / 2 + 427px);
+      top: 1071px;
+      animation: float 2.6s ease-in-out infinite;
+      &:hover {
+        animation: float 0.6s ease-in-out infinite;
+      }
+    }
+    .pink {
+      width: 871px;
+      left: calc(50% - 871px / 2 - 486.5px);
+      top: 1558px;
+      animation: float 3.2s ease-in-out infinite;
+      &:hover {
+        animation: float 0.6s ease-in-out infinite;
+      }
     }
   }
   .Main {
@@ -71,14 +109,14 @@
       color: $Grayscale-0;
     }
   }
-  .EventInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 32px;
 
+  .EventInfoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 80px;
     padding-top: 80px;
-    padding-bottom: 80px;
     .Title {
       font-weight: 900;
       font-size: 24px;
@@ -87,13 +125,63 @@
 
       color: $Grayscale-0;
     }
-    .Descriptions {
-      .Description {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 28px;
-        color: $Grayscale-0;
+    .CardsContainer {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      position: relative;
+
+      .DotLine {
+        position: absolute;
+        width: 618px;
+        top: 110px;
+        @include large {
+          width: 513px;
+          top: 107px;
+          left: 146px;
+        }
+        @include medium-large {
+          display: none;
+        }
       }
+
+      .SideContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 160px;
+        &.Left {
+          padding-top: 212px;
+        }
+      }
+    }
+    .CardsContainer-Mobile {
+      padding-top: 40px;
+      display: none;
+    }
+
+    @include medium-large {
+      .CardsContainer {
+        display: none;
+      }
+      .CardsContainer-Mobile {
+        display: flex;
+      }
+    }
+    .CardsContainer-Mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 54px;
+    }
+  }
+  .ButtonContainer {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 164px;
+
+    @include medium-large {
+      padding-top: 80px;
     }
   }
 }

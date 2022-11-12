@@ -9,6 +9,9 @@ import purple from "../../asset/Img/purple_opacity.svg";
 import blue from "../../asset/Img/blue_opacity.svg";
 import curlyLine from "../../asset/Img/curlyLine_opacity.svg";
 import stars from "../../asset/Img/stars.svg";
+import dotLine from "../../asset/Img/dotLine.svg";
+import EventInfoCard from "./EventInfoCard";
+import { eventInfoData } from "./data";
 
 const SolutionAndEvent = () => {
   return (
@@ -34,6 +37,16 @@ const SolutionAndEvent = () => {
           src={stars}
           alt="backgroundElement"
         />
+        <img
+          className="BackgroundElement green"
+          src={green}
+          alt="backgroundElement"
+        />
+        <img
+          className="BackgroundElement pink"
+          src={pink}
+          alt="backgroundElement"
+        />
       </div>
       <div className="Main">
         <div className="SectionTitle">年度最強合作，三大主題來襲</div>
@@ -51,25 +64,45 @@ const SolutionAndEvent = () => {
             timeRange2={item.timeRange2}
           />
         ))}
-      </div>
-      <div className="EventInfo">
-        <div className="Title">活動說明</div>
-        <div className="Descriptions">
-          <p className="Description">
-            1. 報名時間：10/13～10/30，報名截止前可修改報名組別。
-          </p>
-          <p className="Description">
-            2.
-            登錄作品：10/31～11/28，依賽程登錄作品：10/31（一）UI、團體組開賽；11/7（一）前端組開賽
-          </p>
-          <p className="Description">3. 額外競賽：主題豐厚獎金等著你</p>
-          <p className="Description">
-            4. 活動採用 UI、前端接力合作形式，前端工程師可採用 UI
-            設計師的設計稿，一同產出完整作品。
-          </p>
+        <div className="EventInfoContainer">
+          <div className="Title">活動說明</div>
+          <div className="CardsContainer">
+            <img className="DotLine" src={dotLine} alt="dotLine" />
+            <div className="SideContainer Right">
+              <EventInfoCard
+                title={eventInfoData[0].title}
+                description={eventInfoData[0].description}
+              />
+              <EventInfoCard
+                title={eventInfoData[2].title}
+                description={eventInfoData[2].description}
+              />
+            </div>
+            <div className="SideContainer Left">
+              <EventInfoCard
+                title={eventInfoData[1].title}
+                description={eventInfoData[1].description}
+              />
+              <EventInfoCard
+                title={eventInfoData[3].title}
+                description={eventInfoData[3].description}
+              />
+            </div>
+          </div>
+          <div className="CardsContainer-Mobile">
+            {eventInfoData.map((item, index) => (
+              <EventInfoCard
+                key={item.title + index}
+                title={item.title}
+                description={item.description}
+              />
+            ))}
+          </div>
         </div>
       </div>
-      <Btn>我要報名</Btn>
+      <div className="ButtonContainer">
+        <Btn>我要報名</Btn>
+      </div>
     </div>
   );
 };

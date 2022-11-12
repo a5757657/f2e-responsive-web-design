@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./weekCard.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WeekCard = (props) => {
   const { index, title, tag1, tag2, timeRange1, timeRange2 } = props;
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className={`Container Order${index}`}>
-      <div className="WeekCard">
+      <div
+        className="WeekCard"
+        data-aos="fade-up"
+        data-aos-delay="400"
+        data-aos-duration="800"
+        data-aos-easing="ease-in-out"
+      >
         <div className="Top">
           <div className="TitleContainer">
             <h4 className="Title">{`Week ${index}`}</h4>
