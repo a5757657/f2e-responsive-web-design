@@ -5,6 +5,7 @@ export const data = [
     tag2: "贊助商：版塊設計",
     timeRange1: "10/31(一) 12:00 PM ~ 11/7(一) 12:00 PM",
     timeRange2: "11/7(一) 12:00 PM ~ 11/14(一) 12:00 PM",
+    exLink: "https://2022.thef2e.com/news/week1",
   },
   {
     title: "今晚，我想來點點簽",
@@ -12,6 +13,7 @@ export const data = [
     tag2: "贊助商：凱鈿行動科技",
     timeRange1: "11/7(一) 12:00 PM ~ 11/14(一) 12:00 PM",
     timeRange2: "11/14(一) 12:00 PM ~ 11/21(一) 12:00 PM",
+    exLink: "https://2022.thef2e.com/news/week2",
   },
   {
     title: "Scrum 新手村",
@@ -19,6 +21,7 @@ export const data = [
     tag2: "贊助商：鈦坦科技",
     timeRange1: "11/14(一) 12:00 PM ~ 11/21(一) 12:00 PM ",
     timeRange2: "11/21(一) 12:00 PM ~ 11/28(一) 12:00 PM",
+    exLink: "https://2022.thef2e.com/news/week3",
   },
 ];
 

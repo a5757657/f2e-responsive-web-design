@@ -62,6 +62,7 @@ const SolutionAndEvent = () => {
             tag2={item.tag2}
             timeRange1={item.timeRange1}
             timeRange2={item.timeRange2}
+            exLink={item.exLink}
           />
         ))}
         <div className="EventInfoContainer">
@@ -101,7 +102,7 @@ const SolutionAndEvent = () => {
         </div>
       </div>
       <div className="ButtonContainer">
-        <Btn>我要報名</Btn>
+        <Btn content="我要報名" />
       </div>
     </div>
   );

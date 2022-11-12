@@ -6,6 +6,7 @@
     justify-content: center;
   }
   .WeekCard {
+    cursor: pointer;
     &:hover {
       transform: translate(0, -4px);
       transition: transform 0.8s ease-in-out;

@@ -1,5 +1,6 @@
 @import "../../styles/mixin.scss";
 .EventInfoCard {
+  cursor: pointer;
   background: rgba(16, 53, 80, 0.7);
   border: 1px solid $Grayscale-0;
   width: 600px;

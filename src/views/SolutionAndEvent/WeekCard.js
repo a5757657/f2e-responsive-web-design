@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const WeekCard = (props) => {
-  const { index, title, tag1, tag2, timeRange1, timeRange2 } = props;
+  const { index, title, tag1, tag2, timeRange1, timeRange2, exLink } = props;
   useEffect(() => {
     AOS.init();
   }, []);
@@ -17,6 +17,7 @@ const WeekCard = (props) => {
         data-aos-delay="400"
         data-aos-duration="800"
         data-aos-easing="ease-in-out"
+        onClick={() => window.open(exLink, "_blank")}
       >
         <div className="Top">
           <div className="TitleContainer">
