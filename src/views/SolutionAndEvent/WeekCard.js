@@ -8,11 +8,13 @@ const WeekCard = (props) => {
       <div className="WeekCard">
         <div className="Top">
           <div className="TitleContainer">
-            <h4 className="Title">Week {index}</h4>
+            <h4 className="Title">{`Week ${index}`}</h4>
+            <h4 className="Title TitleFilled">{`Week ${index}`}</h4>
           </div>
           <div className="SubtitleContainer">
             <div className="Subtitle">
               <span>{title}</span>
+              <span className="SubtitleFilled">{title}</span>
             </div>
             <div className="TagsContainer">
               <div className="Tag">
@@ -35,7 +37,14 @@ const WeekCard = (props) => {
               <div className="InfoContent">{timeRange2}</div>
             </div>
           </div>
-          <div className="DetailedButton">關卡細節</div>
+          <div className="DetailedButtonContainer">
+            <div className="DetailedButton">
+              <p className="ButtonText">關卡細節</p>
+            </div>
+            <div className="DetailedButton ButtonFilled">
+              <p className="ButtonText">關卡細節</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
