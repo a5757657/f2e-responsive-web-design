@@ -331,13 +331,10 @@ const Faq = () => {
               </div>
             </div>
           </div>
-          <div className="joinBtn" target="_blank">
-            <button
-              className="btn btn-cta join"
-              onClick={() => window.open("https://2022.thef2e.com/", "_blank")}
-            >
-              別擔心太多。報名，就對了
-            </button>
+          <div className="joinBtn">
+              <button className="btn btn-cta join" onClick={() => window.open("https://2022.thef2e.com/", "_blank")}>
+                別擔心太多。報名，就對了
+              </button>
           </div>
         </div>
       </div>
