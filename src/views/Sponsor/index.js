@@ -62,7 +62,7 @@ const Sponsor = () => {
 
   return (
     <div className="Sponsor">
-      <div className="bg">
+      <div className="imgs">
         <img id="star1" className="star layer" data-speed="1" src={star1} alt="星星" />
         <img id="star2" className="star layer" data-speed="1" src={star2} alt="星星" />
         <img id="star3" className="star layer" data-speed="1" src={star3} alt="星星" />
