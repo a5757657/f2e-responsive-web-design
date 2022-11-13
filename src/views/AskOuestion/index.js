@@ -35,42 +35,42 @@ const AskQuestion = () => {
   useLayoutEffect(() => {
     const context = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger);
-      // gsap.utils.toArray(".tri").forEach((e, i) => {
-      //   ScrollTrigger.create({
-      //     trigger: e,
-      //     start: "top 100%",
-      //     end: "top 0%",
-      //     onEnter: () => {
-      //       gsap.fromTo(
-      //         e,
-      //         { x: 0, y: -100, opacity: 0, visibility: "hidden", duration: 2 },
-      //         {
-      //           duration: 2,
-      //           x: 0,
-      //           y: 0,
-      //           visibility: "visible",
-      //           opacity: "1",
-      //           ease: "expo",
-      //           overwrite: "auto",
-      //         }
-      //       );
-      //     },
-      //   });
-      // });
-
-      const scrollTL = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".AskQuestion",
-          start: "top 40%",
-          end: "top 15%",
-          scrub: true,
-          // markers: true,
-        },
+      gsap.utils.toArray(".tri").forEach((e, i) => {
+        ScrollTrigger.create({
+          trigger: e,
+          start: "top 100%",
+          end: "top 0%",
+          onEnter: () => {
+            gsap.fromTo(
+              e,
+              { x: 0, y: -100, opacity: 0, visibility: "hidden", duration: 2 },
+              {
+                duration: 2,
+                x: 0,
+                y: 0,
+                visibility: "visible",
+                opacity: "1",
+                ease: "expo",
+                overwrite: "auto",
+              }
+            );
+          },
+        });
       });
-      scrollTL
-        .from(".tri1", { y: -50, duration: 1 })
-        .from(".tri2", { y: -50, duration: 1 })
-        .from(".tri3", { y: -50, duration: 1 });
+
+      // const scrollTL = gsap.timeline({
+      //   scrollTrigger: {
+      //     trigger: ".AskQuestion",
+      //     start: "top 40%",
+      //     end: "top 15%",
+      //     scrub: true,
+      //     // markers: true,
+      //   },
+      // });
+      // scrollTL
+      //   .from(".tri1", { y: -50, duration: 1 })
+      //   .from(".tri2", { y: -50, duration: 1 })
+      //   .from(".tri3", { y: -50, duration: 1 });
     }, ".App");
     return () => context.revert();
   }, []);
