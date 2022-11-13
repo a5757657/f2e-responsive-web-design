@@ -76,14 +76,14 @@ const Sponsor = () => {
             <img id="titansoft" src={titan} alt="新加坡商 鈦坦科技" />
           </div>
           </a>
-          <a href={kdanLink} target="_blank">
-          <div className="blocks">
+          <a href={kdanLink}>
+          <div className="blocks" target="_blank">
             <div className="word">凱鈿科技</div>
             <img id="kdan" src={block} alt="凱鈿科技" />
           </div>
           </a>
-          <a href={blockLink} target="_blank">
-          <div className="blocks">
+          <a href={blockLink}>
+          <div className="blocks" target="_blank">
             <div className="word">板塊設計</div>
             <img id="blockstudio" src={kdan} alt="板塊設計" />
           </div>
