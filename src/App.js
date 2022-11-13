@@ -5,7 +5,6 @@ import Awards from './views/Awards'
 import Banner from "./views/Banner";
 import BreakTheQuestion from "./views/BreakTheQuestion";
 import Faq from './views/Faq'
-import Footer from './views/Footer'
 import NavBar from "./views/NavBar";
 import RelayAndShare from './views/RelayAndShare';
 import SolutionAndEvent from './views/SolutionAndEvent'
@@ -23,7 +22,6 @@ function App() {
       <Sponsor />
       <RelayAndShare />
       <Faq />
-      <Footer />
     </div>
   );
 }
