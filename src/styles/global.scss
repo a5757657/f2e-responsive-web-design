@@ -131,3 +131,17 @@ $btn-font-weight: 900;
   background: $Grayscale-100;
   cursor: auto;
 }
+
+#noiseBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  min-width: 1466px;
+  min-height: 1024px;
+  z-index: 99;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  opacity: .5;
+}

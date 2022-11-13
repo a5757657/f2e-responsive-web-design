@@ -9,10 +9,15 @@ import NavBar from "./views/NavBar";
 import RelayAndShare from './views/RelayAndShare';
 import SolutionAndEvent from './views/SolutionAndEvent'
 import Sponsor from './views/Sponsor'
+import noiseBg from './asset/Img/noiseBackground.png'
 
 function App() {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   return (
     <div className="App">
+      <img id='noiseBg' src={noiseBg} alt="" />
       <NavBar />
       <Banner />
       <AskQuestion />
