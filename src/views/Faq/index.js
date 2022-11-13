@@ -334,7 +334,7 @@ const Faq = () => {
               </div>
             </div>
           </div>
-          <div className="joinBtn">
+          <div className="joinBtn" target="_blank">
             <a href={join}>
               <button className="btn btn-cta join">
                 別擔心太多。報名，就對了
