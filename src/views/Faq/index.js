@@ -5,9 +5,6 @@ import "./index.scss";
 import left from "../../asset/AskQuesSponsor/FAQ/FAQ_L.png";
 import right from "../../asset/AskQuesSponsor/FAQ/FAQ_R.png";
 
-// Link
-const join ="https://2022.thef2e.com/";
-
 const Faq = () => {
   const [question, setQuestion] = useState("FAQ");
 
@@ -335,11 +332,12 @@ const Faq = () => {
             </div>
           </div>
           <div className="joinBtn" target="_blank">
-            <a href={join}>
-              <button className="btn btn-cta join">
-                別擔心太多。報名，就對了
-              </button>
-            </a>
+            <button
+              className="btn btn-cta join"
+              onClick={() => window.open("https://2022.thef2e.com/", "_blank")}
+            >
+              別擔心太多。報名，就對了
+            </button>
           </div>
         </div>
       </div>

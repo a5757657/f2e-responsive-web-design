@@ -58,19 +58,19 @@ const AskQuestion = () => {
       //   });
       // });
 
-      const scrollTL = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".AskQuestion",
-          start: "top 40%",
-          end: "top 15%",
-          scrub: true,
-          // markers: true,
-        },
-      });
-      scrollTL
-        .from(".tri1", { y: -50, duration: 1 })
-        .from(".tri2", { y: -50, duration: 1 })
-        .from(".tri3", { y: -50, duration: 1 });
+    //   const scrollTL = gsap.timeline({
+    //     scrollTrigger: {
+    //       trigger: ".AskQuestion",
+    //       start: "top 40%",
+    //       end: "top 15%",
+    //       scrub: true,
+    //       markers: true,
+    //     },
+    //   });
+    //   scrollTL
+    //     .from(".tri1", { y: -50, duration: 1 })
+    //     .from(".tri2", { y: -50, duration: 1 })
+    //     .from(".tri3", { y: -50, duration: 1 });
     }, ".App");
     return () => context.revert();
   }, []);
