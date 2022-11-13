@@ -11,11 +11,6 @@ import block from "./../../asset/AskQuesSponsor/Sponsor/BlockStudio.png";
 import titan from "./../../asset/AskQuesSponsor/Sponsor/TitanSoft.png";
 import kdan from "./../../asset/AskQuesSponsor/Sponsor/KDAN.png";
 
-// Links
-const titanLink = "https://titansoft.com/tw";
-const kdanLink = "https://www.kdanmobile.com/zh-tw";
-const blockLink = "https://blockstudio.tw";
-
 const Sponsor = () => {
   useEffect(() => {
     document.addEventListener('mousemove', parallax)
@@ -70,24 +65,18 @@ const Sponsor = () => {
       <div className="title fade-in-right">贊助單位</div>
       <div className="container">
         <div className="wrapper">
-          <a href={titanLink} target="_blank">
-          <div className="blocks">
+          <div className="blocks" onClick={() => window.open("https://titansoft.com/tw", "_blank")}>
             <div className="word">鈦坦科技</div>
             <img id="titansoft" src={titan} alt="新加坡商 鈦坦科技" />
           </div>
-          </a>
-          <a href={kdanLink} target="_blank">
-          <div className="blocks">
+          <div className="blocks" onClick={() => window.open("https://www.kdanmobile.com/zh-tw", "_blank")}>
             <div className="word">凱鈿科技</div>
             <img id="kdan" src={block} alt="凱鈿科技" />
           </div>
-          </a>
-          <a href={blockLink} target="_blank">
-          <div className="blocks">
+          <div className="blocks" onClick={() => window.open("https://blockstudio.tw", "_blank")}>
             <div className="word">板塊設計</div>
             <img id="blockstudio" src={kdan} alt="板塊設計" />
           </div>
-          </a>
         </div>
         <div className="cooper fade-in-right">
           <p>共同推廣 JIRA、miro、DottedSign</p>
