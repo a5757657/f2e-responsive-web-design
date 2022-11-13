@@ -70,19 +70,19 @@ const Sponsor = () => {
       <div className="title fade-in-right">贊助單位</div>
       <div className="container">
         <div className="wrapper">
-          <a href={titanLink}>
+          <a href={titanLink} target="_blank">
           <div className="blocks">
             <div className="word">鈦坦科技</div>
             <img id="titansoft" src={titan} alt="新加坡商 鈦坦科技" />
           </div>
           </a>
-          <a href={kdanLink}>
+          <a href={kdanLink} target="_blank">
           <div className="blocks">
             <div className="word">凱鈿科技</div>
             <img id="kdan" src={block} alt="凱鈿科技" />
           </div>
           </a>
-          <a href={blockLink}>
+          <a href={blockLink} target="_blank">
           <div className="blocks">
             <div className="word">板塊設計</div>
             <img id="blockstudio" src={kdan} alt="板塊設計" />
