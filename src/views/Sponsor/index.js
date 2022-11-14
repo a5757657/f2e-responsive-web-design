@@ -13,18 +13,18 @@ import kdan from "./../../asset/AskQuesSponsor/Sponsor/KDAN.png";
 
 const Sponsor = () => {
   useEffect(() => {
-    document.addEventListener('mousemove', parallax)
+    document.addEventListener("mousemove", parallax);
     function parallax(e) {
-      this.querySelectorAll('.layer').forEach((layer) => {
-        const speed = layer.getAttribute('data-speed')
+      this.querySelectorAll(".layer").forEach((layer) => {
+        const speed = layer.getAttribute("data-speed");
 
-        const x = (window.innerWidth - e.pageX * speed) / 25
-        const y = (window.innerHeight - e.pageY * speed) / 250
+        const x = (window.innerWidth - e.pageX * speed) / 25;
+        const y = (window.innerHeight - e.pageY * speed) / 250;
 
-        layer.style.transform = `translateX(${x}px) translateY(${y}px)`
-      })
+        layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
+      });
     }
-  })
+  });
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -57,10 +57,28 @@ const Sponsor = () => {
 
   return (
     <div className="Sponsor">
-      <div className="bg">
-        <img id="star1" className="star layer" data-speed="1" src={star1} alt="星星" />
-        <img id="star2" className="star layer" data-speed="1" src={star2} alt="星星" />
-        <img id="star3" className="star layer" data-speed="1" src={star3} alt="星星" />
+      <div className="imgs">
+        <img
+          id="star1"
+          className="star layer"
+          data-speed="1"
+          src={star1}
+          alt="星星"
+        />
+        <img
+          id="star2"
+          className="star layer"
+          data-speed="1"
+          src={star2}
+          alt="星星"
+        />
+        <img
+          id="star3"
+          className="star layer"
+          data-speed="1"
+          src={star3}
+          alt="星星"
+        />
       </div>
       <div className="title fade-in-right">贊助單位</div>
       <div className="container">

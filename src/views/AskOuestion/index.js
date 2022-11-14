@@ -25,7 +25,7 @@ const AskQuestion = () => {
         const speed = layer.getAttribute('data-speed')
 
         const x = (window.innerWidth - e.pageX * speed) / 25
-        const y = (window.innerHeight - e.pageY * speed) / 25
+        const y = (window.innerHeight - e.pageY * speed) / 175
 
         layer.style.transform = `translateX(${x}px) translateY(${y}px)`
       })
