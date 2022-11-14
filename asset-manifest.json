@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/f2e-responsive-web-design/static/css/main.8c4ca340.css",
-    "main.js": "/f2e-responsive-web-design/static/js/main.8c9d1f43.js",
+    "main.css": "/f2e-responsive-web-design/static/css/main.b4add7d1.css",
+    "main.js": "/f2e-responsive-web-design/static/js/main.b6af103f.js",
     "static/js/787.774f7c70.chunk.js": "/f2e-responsive-web-design/static/js/787.774f7c70.chunk.js",
     "static/media/noiseBackground.png": "/f2e-responsive-web-design/static/media/noiseBackground.871b6b27c3e8850a99a4.png",
     "static/media/FE-3.svg": "/f2e-responsive-web-design/static/media/FE-3.8bbdb5b6e47ada9bb7b089307944d36b.svg",
@@ -45,12 +45,12 @@
     "static/media/BlockStudio.png": "/f2e-responsive-web-design/static/media/BlockStudio.4d916d23b51736c3f0c9.png",
     "static/media/KDAN.png": "/f2e-responsive-web-design/static/media/KDAN.26a28afd2471f8258e4e.png",
     "index.html": "/f2e-responsive-web-design/index.html",
-    "main.8c4ca340.css.map": "/f2e-responsive-web-design/static/css/main.8c4ca340.css.map",
-    "main.8c9d1f43.js.map": "/f2e-responsive-web-design/static/js/main.8c9d1f43.js.map",
+    "main.b4add7d1.css.map": "/f2e-responsive-web-design/static/css/main.b4add7d1.css.map",
+    "main.b6af103f.js.map": "/f2e-responsive-web-design/static/js/main.b6af103f.js.map",
     "787.774f7c70.chunk.js.map": "/f2e-responsive-web-design/static/js/787.774f7c70.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c4ca340.css",
-    "static/js/main.8c9d1f43.js"
+    "static/css/main.b4add7d1.css",
+    "static/js/main.b6af103f.js"
   ]
 }
